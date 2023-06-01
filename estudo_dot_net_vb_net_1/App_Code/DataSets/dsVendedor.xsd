@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsVendedor" targetNamespace="http://tempuri.org/dsVendedor.xsd" xmlns:mstns="http://tempuri.org/dsVendedor.xsd" xmlns="http://tempuri.org/dsVendedor.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsVendedor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Vendedor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_vend" type="xs:string" minOccurs="0" />
+              <xs:element name="sobrenome" type="xs:string" minOccurs="0" />
+              <xs:element name="pri_nome" type="xs:string" minOccurs="0" />
+              <xs:element name="cod_cargo" type="xs:string" minOccurs="0" />
+              <xs:element name="endereco" type="xs:string" minOccurs="0" />
+              <xs:element name="cidade" type="xs:string" minOccurs="0" />
+              <xs:element name="telefone" type="xs:string" minOccurs="0" />
+              <xs:element name="foto" type="xs:string" minOccurs="0" />
+              <xs:element name="obs" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

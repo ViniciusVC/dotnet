@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="default.aspx" title="Home"  description="">
+      
+      <siteMapNode url="pesq_cargos.aspx" title="Pesquisa de Cargo"  description="" >
+          <siteMapNode url="cad_cargos.aspx" title="Cadastro"  description="" />
+      </siteMapNode>
+      
+      <siteMapNode url="pesq_clientes.aspx" title="Pesquisa de Cliente"  description="" >
+        <siteMapNode url="cad_clientes.aspx" title="Cadastro"  description="" />
+      </siteMapNode>
+      
+      <siteMapNode url="pesq_pedidos.aspx" title="Pesquisa de Pedidos"  description="" >
+        <siteMapNode url="cad_pedidos.aspx" title="Pedidos"  description="" />
+        <siteMapNode url="cad_itens.aspx" title="Itens"  description="" />
+      </siteMapNode>
+      
+      <siteMapNode url="pesq_vendedor.aspx" title="Pesquisa de Vendedor"  description="" >
+        <siteMapNode url="cad_vendedor.aspx" title="Cadastro"  description="" />
+      </siteMapNode>
+      
+      <siteMapNode url="pesq_produtos.aspx" title="Pesquisa de Produtos"  description="" >
+        <siteMapNode url="cad_produtos.aspx" title="Cadastro"  description="" />
+      </siteMapNode>
+      
+      <siteMapNode url="login.aspx" title=""  description="" />
+      <siteMapNode url="relatorio.aspx" title="Relatórios"  description="" />
+      <siteMapNode url="faleconosco.aspx" title="Fale Conosco"  description="" />
+      
+    </siteMapNode>
+</siteMap>

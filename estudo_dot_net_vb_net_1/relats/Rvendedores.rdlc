@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>8563747e-7f36-495a-a26c-351939202620</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>2.5cm</RightMargin>
+  <LeftMargin>2.5cm</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox13">
+        <rd:DefaultName>textbox13</rd:DefaultName>
+        <Top>0.25cm</Top>
+        <Width>4.53968cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>13.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Globals!ExecutionTime</Value>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <Top>0.25cm</Top>
+        <Width>4.75cm</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>Cursso DBI</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>0.25cm</Top>
+        <Width>6.25cm</Width>
+        <Style>
+          <FontSize>12pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>6.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>Relatório de Vendedores</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>1.13492cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>2.5cm</BottomMargin>
+  <rd:ReportID>e0f234e5-1a19-4c47-918d-04bf9ad138bd</rd:ReportID>
+  <PageWidth>21cm</PageWidth>
+  <DataSets>
+    <DataSet Name="dsClientes_Clientes">
+      <Fields>
+        <Field Name="cod_cli">
+          <DataField>cod_cli</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nome">
+          <DataField>nome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="empresa">
+          <DataField>empresa</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cidade">
+          <DataField>cidade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cargo">
+          <DataField>cargo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="endereco">
+          <DataField>endereco</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="telefone">
+          <DataField>telefone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cod_cargo">
+          <DataField>cod_cargo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsClientes</rd:DataSetName>
+        <rd:TableName>Clientes</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="dsVendedor_Vendedor">
+      <Fields>
+        <Field Name="cod_vend">
+          <DataField>cod_vend</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="sobrenome">
+          <DataField>sobrenome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="pri_nome">
+          <DataField>pri_nome</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cod_cargo">
+          <DataField>cod_cargo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="endereco">
+          <DataField>endereco</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="cidade">
+          <DataField>cidade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="telefone">
+          <DataField>telefone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="foto">
+          <DataField>foto</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="obs">
+          <DataField>obs</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsVendedor</rd:DataSetName>
+        <rd:TableName>Vendedor</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>18cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <DataSetName>dsVendedor_Vendedor</DataSetName>
+        <Top>0.25cm</Top>
+        <Width>15.58333cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="cod_vend">
+                      <rd:DefaultName>cod_vend</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!cod_vend.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="pri_nome">
+                      <rd:DefaultName>pri_nome</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!pri_nome.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="sobrenome">
+                      <rd:DefaultName>sobrenome</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!sobrenome.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="cod_cargo_1">
+                      <rd:DefaultName>cod_cargo_1</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!cod_cargo.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Black</BackgroundColor>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Codigo</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Black</BackgroundColor>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>Nome</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Black</BackgroundColor>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>sobrenome</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Black</BackgroundColor>
+                        <FontWeight>700</FontWeight>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>codigo do cargo</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>2cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>5.33333cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.25cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.90476cm</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+      </Table>
+    </ReportItems>
+    <Height>5.13492cm</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox8">
+        <rd:DefaultName>textbox8</rd:DefaultName>
+        <Top>0.25cm</Top>
+        <Width>3.03968cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>14.5cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>="pagina: " &amp; Globals!PageNumber &amp; " de " &amp; Globals!TotalPages</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.25cm</Top>
+        <Width>5.25cm</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>0.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>Aula de relatorio do dia 104/2009</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>1.13492cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="cargos">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\cargos.vb</FileName>
+      <HashCode>AAAAECAAAAAACEgAAgACAQAAAAAgAAgIQAAKAwAAgAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Enum Name="cargos.CamposTabela" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>App_Code\cargos.vb</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="dcargos">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\cargos.vb</FileName>
+      <HashCode>AAAAkCIgAAAAAAgAAgAAAQAAAAEhAAgEQgAIAgAAgAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="clientes" Collapsed="true">
+    <Position X="5.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\clientes.vb</FileName>
+      <HashCode>QQQAECAQAAAACMgACgACASAAQAAggggAQAAaAgAAgCA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dclientes" Collapsed="true">
+    <Position X="7.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\clientes.vb</FileName>
+      <HashCode>AAAAkCIAAAAAAAgAAgAAASAAAAEhAAgEQgAIAgAAgAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Funcoes" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\Funcoes.vb</FileName>
+      <HashCode>AAAAAAASAAAAAQAAAogAAAAACBAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dsClientes" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>C:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\curso\804e2b96\bfd8e6a3\Sources_App_Code\dsclientes.xsd.72cecc2a.vb</FileName>
+      <HashCode>AEAAAAAAAwAgAAJABABAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="itens" Collapsed="true">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\itens.vb</FileName>
+      <HashCode>AAAFGCAQAAAACAwAAgAAAYAAAAAgAAiIQAAIAgBAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ditens" Collapsed="true">
+    <Position X="9" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\itens.vb</FileName>
+      <HashCode>AAAAkCIAAAAAAAgAAgAAAQgAAAEhAAgEQgAIAgAAgAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pedidos" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\pedidos.vb</FileName>
+      <HashCode>BAAEECAAgQAACAiACwgKAYAAAAAhAgiAUABIAgAIhCA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dpedidos" Collapsed="true">
+    <Position X="9" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\pedidos.vb</FileName>
+      <HashCode>AAAAkCIgAAAAAAgAAgAAAQAAAAEhAAgEQgAIAgAAgAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="products" Collapsed="true">
+    <Position X="7.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\products.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="produtos" Collapsed="true">
+    <Position X="5.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\produtos.vb</FileName>
+      <HashCode>ACAAGSAQAAAACAwAAgAAASAAAAAgQAkIQAAIAgAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dprodutos" Collapsed="true">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\produtos.vb</FileName>
+      <HashCode>AAAAkCIgAAAAAAgAAgAAAQAAAAEhAAgEQgAIAgAAgAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SGBD" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\SGBD.vb</FileName>
+      <HashCode>AgAAAAoIAAQAA4AAAGAgAIAAFhCAAAAggAABBQgAEAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="vendedor" Collapsed="true">
+    <Position X="9" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\vendedor.vb</FileName>
+      <HashCode>AAAAECAAgCAIKMgAAiAiAQAAAAgggggAQAAaAgAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="dvendedor" Collapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App_Code\vendedor.vb</FileName>
+      <HashCode>AAAAkCIgAAAAAAgAAgAAAQAAAAEhAAgEQgAIAgAAgAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

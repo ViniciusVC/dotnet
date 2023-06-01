@@ -1,0 +1,186 @@
+﻿
+/* Accordion */
+.accordionHeader
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #2E4d7B;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align:left;
+}
+
+.accordionHeader a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+.accordionHeader a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionHeaderSelected
+{
+    border: 1px solid #2F4F4F;
+    color: white;
+    background-color: #5078B3;
+	font-family: Arial, Sans-Serif;
+	font-size: 12px;
+	font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align:left;
+}
+
+.accordionHeaderSelected a
+{
+	color: #FFFFFF;
+	background: none;
+	text-decoration: none;
+}
+
+.accordionHeaderSelected a:hover
+{
+	background: none;
+	text-decoration: underline;
+}
+
+.accordionContent
+{
+    background-color: #D3DEEF;
+    border: 1px dashed #2F4F4F;
+    border-top: none;
+    padding: 5px;
+    padding-top: 10px;
+    text-align: left;
+    color: #2E4d7B;
+}
+
+
+.MaskedEditFocus
+{
+    background-color: #ffffcc;
+}
+
+.MaskedEditError
+{
+    background-color: #ffefd5;
+}
+
+div.MessageStyle
+{
+    background-color: #ffff99;
+    height: 18px;
+    visibility: hidden;
+    font-family: Arial;
+    color: #8b4513;
+    font-size: 10pt;
+    text-align:right;
+}
+
+body
+{
+    color: #696969;
+    font-family: Verdana;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    background-position: top;
+    background-image: url(images/fundo.gif);
+    background-color: #cdd5d9;
+    margin: 0;
+}
+
+.tablecentro
+{
+    border-left-color: #a9a9a9;
+    border-bottom-color: #a9a9a9;
+    border-top-style: solid;
+    border-top-color: #a9a9a9;
+    border-right-style: solid;
+    border-left-style: solid;
+    background-color: #f5f5f5;
+    border-right-color: #a9a9a9;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.tablecentroTH
+{
+    background-color: #dcdcdc;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-weight: bold;
+    text-align: center;
+    height: 25px;
+}
+
+.tablecentro td
+{
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    border-width: 1px;
+}
+
+.tablemaster
+{
+    width: 800px;
+    font-family: Verdana;
+    background-color: #ffffff;
+    border-left-color: #708090;
+    border-bottom-color: #708090;
+    border-top-style: solid;
+    border-width: thin;
+    border-top-color: #708090;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: #708090;
+    border-bottom-style: solid;
+}
+
+.tableheader
+{
+    height: 50px;
+    background-color: #708090;
+    font-size: 15pt;
+    color: #ffffff;
+}
+
+.tablemenu
+{
+    font-size: 10pt;
+    background-color: #B5C7DE;
+    height: 550px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.tablecells
+{
+    font-size: 10pt;
+    background-color: #ffffff;
+    width: 700px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.tablefooter
+{
+    font-size: 10pt;
+    background-color: #708090;
+    vertical-align: top;
+    text-align: center;
+    color: #ffffff;
+}

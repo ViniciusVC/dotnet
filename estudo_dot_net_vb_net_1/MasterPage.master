@@ -1,0 +1,122 @@
+<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master Page</title>
+    <link rel="STYLESHEET" href="/App_Themes/Theme1/StyleSheet.css" type="text/css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="tablemaster" align="center">
+                <tr>
+                    <th colspan="2" class="tableheader">
+                        Curso ASP.NET DBI - Sistema de Pedidos</th>
+                </tr>
+                <tr>
+                    <td class="tablemenu" align="center">
+                        &nbsp;<br />
+                        <asp:Menu ID="Menu1" runat="server" DisappearAfter="2000">
+                            <Items>
+                                <asp:MenuItem Selectable="False" Text="Cargos" Value="Cargos">
+                                    <asp:MenuItem NavigateUrl="pesq_cargos.aspx" Text="Consulta" Value="Consulta"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="cad_cargos.aspx" Text="Cadastro" Value="Cadastro"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Clientes" Value="Clientes">
+                                    <asp:MenuItem NavigateUrl="pesq_clientes.aspx" Text="Consulta" Value="Consulta"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="cad_clientes.aspx" Text="Cadastro" Value="Cadastro"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Vendedores" Value="Vendedores">
+                                    <asp:MenuItem NavigateUrl="pesq_vendedor.aspx" Text="Consulta" Value="Consulta"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="cad_vendedor.aspx" Text="Cadastro" Value="Cadastro"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Produtos" Value="Produtos">
+                                    <asp:MenuItem NavigateUrl="pesq_produtos.aspx" Text="Consulta" Value="Consulta"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="cad_produtos.aspx" Text="Cadastro" Value="Cadastro"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Selectable="False" Text="Pedidos" Value="Pedidos">
+                                    <asp:MenuItem NavigateUrl="pesq_pedidos.aspx" Text="Consulta" Value="Consulta"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="cad_pedidos.aspx" Text="Cadastro" Value="Cadastro"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Relatorios" Value="Relatorios">
+                                    <asp:MenuItem NavigateUrl="~/RelClientes.aspx" Text="Clientes" Value="Clientes"></asp:MenuItem>
+                                    <asp:MenuItem Text="Vendedores" Value="Vendedores" NavigateUrl="~/RelVendedores.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Produtos" Value="Produtos" NavigateUrl="~/RelProdutos.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Pedidos" Value="Pedidos" NavigateUrl="~/RelatPedidos.aspx"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/relatorio.aspx" Text="Padr&#227;o" Value="Padr&#227;o">
+                                    </asp:MenuItem>
+                                </asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                        &nbsp;&nbsp;<br />
+                        <p>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            &nbsp;</td>
+                    <td class="tablecells">
+                        <div id="AlertDiv" class="MessageStyle">
+                            <span id="AlertMessage"></span>
+                        </div>
+                        <table border="0" style="width: 95%" align="center">
+                            <tr>
+                                <td align="right">
+                                    <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                                    </asp:SiteMapPath>
+                                </td>
+                            </tr>
+                        </table>
+                         <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="True">
+                            <Scripts>
+                                <asp:ScriptReference Path="RestringeAsync.js" />
+                            </Scripts>
+                        </asp:ScriptManager>
+                         <asp:UpdateProgress ID="UpdateProgress1" runat="server" DynamicLayout="False">
+                                <ProgressTemplate>
+                                    &nbsp;<img src="App_Themes/Theme1/Images/indicator.gif" />
+                                    Carregando...
+                                </ProgressTemplate>
+                            </asp:UpdateProgress>
+                            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                <ContentTemplate>
+                                    <table style="width: 600px">
+                                        <tr>
+                                            <td align="center" style="width: 660px; height: 253px">
+                                                <table>
+                                                    <tr>
+                                                        <td colspan="3" rowspan="3" style="width: 671px">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                    </tr>
+                                                    <tr>
+                                                    </tr>
+                                                </table>
+                                                &nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        &nbsp;<br />
+                            <br />
+                            <div style="text-align: center">
+                                &nbsp;</div>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tablefooter" colspan="2">
+                        Desenvolvido por <strong>DBI</strong> - (21) 2252-2699 - www.dbi.com.br</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

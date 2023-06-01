@@ -1,0 +1,57 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:ImageButton ImageUrl="images/localizar_peq.gif" runat="server" ImageAlign="AbsMiddle" SkinID="Img_Pesq" />
+<asp:ImageButton ImageUrl="images/botao_edita.gif" runat="server" SkinID="EditImageButton" />
+<asp:ImageButton ImageUrl="images/botao_nova.gif" runat="server" SkinID="NewImageButton" />
+<asp:ImageButton ImageUrl="images/botao_exc.gif" runat="server" SkinID="ExcImageButton" />
+<asp:ImageButton ImageUrl="images/botao_salvar.gif" runat="server" SkinID="SalvarImageButton" />
+<asp:ImageButton ImageUrl="images/botao_desfazer.gif" runat="server" SkinID="DesfazerImageButton" />
+<asp:ImageButton  ImageUrl="images/botao_pesquisar.gif" runat="server" ImageAlign="AbsMiddle" SkinID="PesqImageButton" />
+<asp:ImageButton  ImageUrl="images/botao_adicionaritem.gif" runat="server" ImageAlign="AbsMiddle" SkinID="AditemImageButton" />
+<asp:ImageButton  ImageUrl="images/Calendar.png" runat="server" ImageAlign="AbsMiddle" SkinID="CalendarImageButton" />
+<asp:ImageButton  ImageUrl="images/bot_entrar.gif" runat="server" ImageAlign="AbsMiddle" SkinID="LoginImageButton" />
+
+
+<asp:HyperLink SkinID="FaleConcosco" runat="server" ImageUrl="C:/Sistema/App_Themes/Theme1/Images/faleconosco.gif" />
+
+<asp:GridView EmptyDataText="Nenhum Registro Encontrado." CellPadding="4" CellSpacing="1" runat="server" AutoGenerateColumns="False" ForeColor="#333333" GridLines="None" BorderColor="darkgray" BorderWidth="1px">
+    <FooterStyle BackColor="#708090" Font-Bold="True" ForeColor="White" />
+    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+    <EditRowStyle BackColor="#999999" />
+    <SelectedRowStyle BackColor="LightGoldenrodYellow" Font-Bold="True" ForeColor="#333333" />
+    <PagerStyle BackColor="#708090" ForeColor="White" HorizontalAlign="Center" />
+    <HeaderStyle BackColor="#708090" Font-Bold="True" ForeColor="White" />
+    <AlternatingRowStyle BackColor="White"  />
+</asp:GridView>
+
+<asp:Menu runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="10" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" StaticSubMenuIndent="30px">
+    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+    <DynamicHoverStyle BackColor="SlateGray" ForeColor="White" />
+    <DynamicMenuStyle BackColor="#B5C7DE" />
+    <StaticSelectedStyle BackColor="SlateGray" />
+    <DynamicSelectedStyle BackColor="SlateGray" />
+    <DynamicMenuItemStyle BorderColor="#B5C7DE" HorizontalPadding="25px" VerticalPadding="2px" />
+    <StaticHoverStyle BackColor="SlateGray" ForeColor="White" />
+</asp:Menu>
+
+<asp:SiteMapPath runat="server" Font-Names="Verdana" Font-Size="0.8em"
+    PathSeparator=" : ">
+    <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+    <CurrentNodeStyle ForeColor="#333333" />
+    <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+    <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+</asp:SiteMapPath>
