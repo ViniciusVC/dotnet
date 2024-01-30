@@ -1,2 +1,5 @@
-# dot_net_vb_net
-Estudo de codigo .net com vb
+# dotnet
+
+Estudo de .net
+
+Codigo antigo com vb e novos com C#.
