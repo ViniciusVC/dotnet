@@ -6,29 +6,31 @@ Codigo antigo com vb e novos com C#.
 
 # Rotas
 
-/estudo_dot_net_vb_net_1
+/estudo_dot_net_vb_net_1 (.NET Framework 3.5 - Visual Estudio 2008)
 
-/csharp001
+/csharp001 (.NET Core 7 - Terminal)
 
+/csharp002 (.NET Core 7 - WEBAPI)
+
+/CalculadoraSimplesAPI (.NET Core 7 - WEBAPI)
 
 # Instal dotnet core
 
-## 1º Instalar o SDK do .NET:
-
 sudo apt-get install -y dotnet-sdk-7.0
 
-## 2º Crie uma pasta para o projeto:
+# Iniciei um projeto de terminal:
 
-mkdir projetoteste
+dotnet new console --name nomedoprojeto
 
-## 3º Entre na pasta:
+# Iniciei um projeto de API:
 
-cd projetoteste
+dotnet new webapi --name nomedoprojeto
 
-## 4º Iniciei um projeto de terminal:
-
-dotnet new console
-
-## 5ª Rodar a aplicação:
+## Rodar a aplicação:
 
 dotnet run
+
+## Rodar a aplicação atualisando automaticamente:
+
+dotnet wath run
+
