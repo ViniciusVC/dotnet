@@ -30,3 +30,4 @@
 /home/vinicius/Documents/Projetos/dotnet/minimalapi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /home/vinicius/Documents/Projetos/dotnet/minimalapi/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /home/vinicius/Documents/Projetos/dotnet/minimalapi/obj/Debug/net7.0/minimalapi.csproj.CopyComplete
+/home/vinicius/Documents/Projetos/dotnet/minimalapi/bin/Debug/net7.0/minimalapi.staticwebassets.runtime.json
