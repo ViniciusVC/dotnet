@@ -35,19 +35,25 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var app = builder.Build();
 
+
+// Endpoint=================================================
 app.MapGet("/", () => "Minimal APIs C Sharp");
+
 
 // Endpoint=================================================
 // simples. Todos os itens de tarefas pendentes.
 // http://localhost:5158/todoitems
 app.MapGet("/todoitems", async(TodoDb db) => await db.Todos.ToListAsync()); 
 
+
 // Endpoint=================================================
 // retorna todos os itens.
 // http://localhost:5158/todoitems/complete
 app.MapGet("/todoitems/complete", async(TodoDb db) =>  
-    await db.Todos.Where(t => t.IsComplete).ToListAsync()); 
+    await db.Todos.Where(t => t.IsComplete).ToListAsync());
 
+
+// Endpoint=================================================
 // Passar um id e retorna a tarefa deacordo com o id.
 // http://localhost:5158/todoitems/0
 app.MapGet("/todoitems/{id}", async(int id,TodoDb db) => 
@@ -56,11 +62,13 @@ app.MapGet("/todoitems/{id}", async(int id,TodoDb db) =>
             ? Results.Ok(todo)
             : Results.NotFound()); // Retorna "Ok" ou "não encontrado".
 
+
 // Endpoint=================================================
 // passar um objeto com a tarefa.
 // Adicionar o objeto com a tarefa.
 app.MapPost("/todoitems", async(Todo todo,TodoDb db) => 
 {
+        Console.writeLine("Endpoint POST. Recebe um objeto com a tarefa. Adicionar o objeto com a tarefa. Retorna o ID criado.");
         db.Todos.Add(todo);
         await db.SaveChangesAsync();
         
@@ -69,10 +77,12 @@ app.MapPost("/todoitems", async(Todo todo,TodoDb db) =>
 });
 
 
+// Endpoint=================================================
 // Rota PUT
 // Atualizar a informação do objeto se ele não for nulo.
 app.MapPut("/todoitems/{id}", async (int id, Todo inputTodo, TodoDb db) =>
 {
+    Console.writeLine("Rota PUT. Atualizar a informação do objeto se ele não for nulo. Retorna mensagem de sucesso.");
     var todo = await db.Todos.FindAsync(id);
 
     if (todo is null) return Results.NotFound();
@@ -85,9 +95,12 @@ app.MapPut("/todoitems/{id}", async (int id, Todo inputTodo, TodoDb db) =>
     return Results.NoContent(); // Retrona mensagem de sucesso.
 });
 
+
+// Endpoint=================================================
 // Rota delete, passsa ID e Objeto.
 app.MapDelete("/todoitems/{id}", async (int id, TodoDb db) =>
 {
+    Console.writeLine("Rota delete, rec recebe ID e Objeto. Retorna mensagem de sucesso ou não encontrado.");
     if (await db.Todos.FindAsync(id) is Todo todo)
     {
         db.Todos.Remove(todo);

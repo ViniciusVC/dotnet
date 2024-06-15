@@ -1,15 +1,21 @@
 
 ## Minimal APIs CSharp
 
-Estudo Minimal APIs no .Net
+Exemplo de Minimal APIs no .Net
 Codificado no VSCode no Linux Ubuntu.
 
 /minimalapi/
 
 ![.NET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
+![Vscode](https://img.shields.io/badge/Vscode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FCC624)
 
-Nota : Minimal APIs não possui controllers.
+https://github.com/ViniciusVC/dotnet/tree/main/minimalapi
+
+Nota : Minimal APIs não possui controllers. Ocultando classe host. Ideal para microsserviços.
+
+Neste projeto Dados não persistem, o banco de dados é in-memory.
 
 ```
 Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7"
@@ -79,11 +85,12 @@ Volte na Program.cs para mapear os endpoints.
 # Rodar projeto:
 
 $ dotnet run
+![terminal API](wwwroot/images/terminal.png "screenshot")
+![navegador API](wwwroot/images/navegador.png "screenshot")
 
 # testar endpoints:
 ```
 Para testar todos os endpoints, instale a extensão Thunder Cliente no VSCode.
 ```
-![navegador API](wwwroot/images/navegador.png "screenshot")
-![terminal API](wwwroot/images/terminal.png "screenshot")
+
 

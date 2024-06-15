@@ -1,7 +1,9 @@
 
 ## Projeto Caltuladora Simples API.
 
-Este é um estudo com DotNet API, em codigo C#, codificado no VSCode no Linux Ubuntu.
+Este é um exemplo de projeto DotNet API.
+
+Foi codificado no VSCode no Linux Ubuntu.
 
 /CalculadoraSimplesAPI/
 
@@ -11,6 +13,7 @@ Este é um estudo com DotNet API, em codigo C#, codificado no VSCode no Linux Ub
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FCC624)
 [![swagger-editor](https://img.shields.io/badge/open--API-in--editor-brightgreen.svg?style=flat&label=client%20open-api-v3)](https://editor.swagger.io/?url=https://raw.githubusercontent.com/lucaro/DRES/master/doc/oas-client.json)
 
+https://github.com/ViniciusVC/dotnet/tree/main/CalculadoraSimplesAPI
 
 # Criar projeto .net API
 ```

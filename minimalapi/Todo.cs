@@ -1,5 +1,5 @@
 // ENTIDADE
-// Este arquivo (Todo.cs) é a ENTIDADE TodoApi 
+// Este arquivo (Todo.cs) é a ENTIDADE TodoApi
 
 
 // using System.EntityFramerkCore;

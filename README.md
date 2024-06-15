@@ -1,6 +1,6 @@
 # dotnet
 
-Estudo de .net
+Alguns projetos de .net
 
 ![.NET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
@@ -20,8 +20,14 @@ Estudo de .net
 /estudo_dot_net_vb_net_1
  (.NET Framework 3.5 - Visual Estudio 2008 - Codigo antigo com vb)
 
- /minimalapi
-  (.NET Core 7 - minimal API - C# )
+/minimalapi
+ (.NET Core 7 - minimal API - C# )
+
+/testes_calculadora_xunit
+ (Exemplo de teste unitario em .NET com xUnit)
+
+/unit_testing_dotnetcore
+ (Exemplo de teste unitario em .NET com xUnit)
 
 ```
 
@@ -38,6 +44,9 @@ $ dotnet new webapi --name nomedoprojeto
 
 Rodar a aplicação:
 $ dotnet run
+
+Rodar a testes:
+$ dotnet test
 
 Rodar a aplicação atualisando automaticamente:
 $ dotnet wath run
