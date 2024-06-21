@@ -17,7 +17,7 @@ https://github.com/ViniciusVC/dotnet/tree/main/testes_calculadora_xunit/
 
 ```
 Saida no terminal:
-![teste xunit](./Screenshotteste_xunit.png "PrtSc")
+![teste xunit](docs/Screenshotteste_xunit.png "PrtSc")
 
 
 # Comandos usados para criar o projeto:

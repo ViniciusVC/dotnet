@@ -1,0 +1,7 @@
+Este diretório não faz parte efetivamente do projeto.
+Serva apenas para armazenar documentação referente ao projeto.
+ex.:
+- Manual.
+- PPT.
+- Imagens para o readme.md.
+- Scripts SQl ou Shell.

@@ -24,12 +24,17 @@ $ dotnet new webapi --name CalculadoraSimplesAPI
 ```
 $ dotnet watch run
 ```
+![terminal API](docs/sreenshot_terinal_dotnet.png "screenshot")
 
-# Ao iniciar o servidor 
+
+# Swagger
 ```
-Abre uma pagina em com Swagger 6.5 em:
+Swagger é um front apenas para teste de API.
+Abre uma pagina em com Swagger em:
 http://localhost:5271/swagger/index.html
 ```
+![navegador swagger](docs/screenshot_swagger_dotnet.png "screenshot")
+
 
 # Controllers
 ```

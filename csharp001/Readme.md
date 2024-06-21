@@ -1,16 +1,19 @@
 
-## C# terminal
+## csharp001 - C# terminal
 
-Este é um projeto DotNet Core do tipo console em codigo C Sharp. Codificado no VSCode no Linux Ubuntu.
+Este é um exemplo de projeto DotNet Core do tipo console.
 
-/csharp001/
+Codificado em C#, no VSCode, no Linux Ubuntu.
 
 ![.NET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
 ![Vscode](https://img.shields.io/badge/Vscode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FCC624)
 
+
+Repositorio no GIT :
 https://github.com/ViniciusVC/dotnet/tree/main/csharp001
+
 
 # Comandos para criar esta aplicação:
 ```
