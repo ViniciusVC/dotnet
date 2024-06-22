@@ -1,5 +1,5 @@
 
-## Minimal APIs CSharp
+## VVC.DotNetMinimalAPI
 
 Exemplo de Minimal APIs no .Net.
 
@@ -11,7 +11,7 @@ Codificado no VSCode no Linux Ubuntu.
 ![Linux](https://img.shields.io/badge/Linux-000?style=for-the-badge&logo=linux&logoColor=FCC624)
 
 Repositorio GitHub : 
-https://github.com/ViniciusVC/dotnet/tree/main/minimalapi
+https://github.com/ViniciusVC/dotnet/tree/main/VVC.DotNetMinimalAPI
 
 Nota : 
 Minimal APIs não possui controllers. Ocultando classe host. Ideal para microsserviços.

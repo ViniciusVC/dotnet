@@ -1,5 +1,4 @@
-
-## csharp001 - C# terminal
+## VVC.DotNetTerminal 
 
 Este é um exemplo de projeto DotNet Core do tipo console.
 
@@ -12,7 +11,7 @@ Codificado em C#, no VSCode, no Linux Ubuntu.
 
 
 Repositorio no GIT :
-https://github.com/ViniciusVC/dotnet/tree/main/csharp001
+https://github.com/ViniciusVC/dotnet/tree/main/VVC.DotNetTerminal
 
 
 # Comandos para criar esta aplicação:

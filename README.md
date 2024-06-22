@@ -8,23 +8,21 @@ Alguns projetos de .net
 
 # Projetos neste repositorio
 ```
-/CalculadoraSimplesAPI
- (.NET Core 7 - WEBAPI com calculadora - C#)
-
-/csharp001
- (.NET Core 7 - Terminal simples - C#)
-
-/csharp002
- (.NET Core 7 - WEBAPI - C#)
-
-/minimalapi
- (.NET Core 7 - minimal API - C# )
-
-/testes_calculadora_xunit
- (Exemplo de teste unitario em .NET com xUnit)
-
-/unit_testing_dotnetcore
- (Exemplo de teste unitario em .NET com xUnit)
+│   
+├── 📂 testes_calculadora_xunit
+│   (Exemplo de teste unitario em .NET com xUnit) 
+│
+├── 📂 VVC.DotNetAPI
+│   ([ERRO] .NET Core 8 - WEBAPI - C#)
+│
+├── 📂 VVC.DotNetAPICalculadora
+│   (.NET Core 8 - WEBAPI com calculadora - Docker - C#) 
+│
+├── 📂 VVC.DotNetMinimalAPI
+│   (.NET Core 8 - minimal API - C# ) 
+│
+├── 📂 VVC.DotNetTerminal
+    (.NET Core 8 - Terminal simples - C#)
 
 ```
 
