@@ -14,7 +14,7 @@
  Aqui no Program.cs são definidas as rotas da aplicação.
 */
 
-using Microsoft.EntityFrameworkCore;
+
 
 /*
     // Ignorar bibliotecas criadas por padrão
@@ -26,7 +26,20 @@ using Microsoft.EntityFrameworkCore;
     using System.Threading.Tasks; // Processos paralelos (usa nucleos separados).
 */
 
-using TodoApi;
+
+
+/*
+// Necessário para ler o "appsettings.json".
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+*/
+
+using Microsoft.EntityFrameworkCore; 
+
+using TodoApi; //Importar namespace TodoApi
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TodoDb>(opt=> opt.UseInMemoryDatabase("TodoList"));
@@ -109,5 +122,26 @@ app.MapDelete("/todoitems/{id}", async (int id, TodoDb db) =>
     }
     return Results.NotFound(); // Retorna erro "não encontrado".
 });
+
+/*
+// Endpoint=================================================
+// Rota GET verifica a connection string.
+app.MapGet("/connection", () => {
+    //Console.writeLine("Rota GET verifica a connection string.");
+    
+
+    IConfiguration config = host.Services.GetRequiredService<IConfiguration>();
+    string? varConnectionString = config.GetValue<string>("FakeConnectString");
+    Console.WriteLine($"KeyThree:Message = {keyThreeNestedValue}");
+
+
+    //var varConnectionString:IConfiguration = Configuration.GetConnectionString(name:"App");
+    if (varConnectionString==null)
+    {
+        return "ERRO : Connection string não disponivel";
+    }
+    return "Connection string Ok.";
+});
+*/
 
 app.Run();

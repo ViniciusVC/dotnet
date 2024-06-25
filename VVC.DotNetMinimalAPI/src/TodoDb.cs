@@ -1,13 +1,13 @@
 /*
     Esta é a entidade Todo.cs. 
     Representação do modelo de dados.
-    Esta é uma Classe de Contesto.
+    Esta é uma Classe de Contexto.
 */
 
 using Microsoft.EntityFrameworkCore;
 
 /*
-using Microsoft.EntityFrameworkCore;
+// Ignorar bibliotecas criadas por padrão
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -19,13 +19,6 @@ using System.Text;
 using System.Threading.Tasks;
 */
 
-/*
-    // Ignorar bibliotecas criadas por padrão
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-*/
 
 namespace TodoApi
 {

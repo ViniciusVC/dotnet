@@ -22,6 +22,9 @@ Alguns projetos de .net
 │   (.NET Core 8 - minimal API - C# ) 
 │
 ├── 📂 VVC.DotNetTerminal
+│   (.NET Core 8 - Terminal simples - C#)
+│
+├── 📂 VVC.console24062024
     (.NET Core 8 - Terminal simples - C#)
 
 ```

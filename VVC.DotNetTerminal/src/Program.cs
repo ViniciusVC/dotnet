@@ -1,4 +1,4 @@
-﻿using System; //Manipular sitema operacional.
+using System; //Manipular sitema operacional.
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq; // ṕara trabalhar com grande Conjunto de dados.
@@ -21,7 +21,6 @@ Projeto DotNet Core do tipo console.
     $ dotnet run
 
 */
-
 
 
 namespace ProgramCSharp001
@@ -103,7 +102,6 @@ namespace ProgramCSharp001
             Console.WriteLine(nomeDaVariavelGlobal+"\n");
 
         }
-
 
         static string perguntanome()
         {

@@ -25,7 +25,7 @@ $ dotnet run
 
 # Endpoints:
 ```
-Porta : 5158
+Porta (dev): 5158
 
 GET - "/"
 // retorna "Minimal APIs C Sharp"
@@ -91,7 +91,21 @@ Include="microsoft.entityframeworkcore.inmemory" Version="7"
 
 # Testar endpoints:
 ```
-Para testar todos os endpoints no VSCode, instale a extensão Thunder Cliente.
+Para testar todos os endpoints no VSCode, use o Postman 
+ou instale a extensão Thunder Cliente no VSCode.
 ```
 
+# Punlish:
+```
+Publicar o projeto:
+sudo dotnet publish --framework net8.0 --runtime osx-x64
 
+Pasta de saida:
+/VVC.DotNetMinimalAPI/src/bin/Release/net8.0/osx-x64
+
+Rodar projeto publicado:
+/bin/Release/net8.0/osx-x64$ dotnet minimalapi.dll
+
+O projeto publicado roda na porta 5000.
+http://localhost:5000/todoitems
+```

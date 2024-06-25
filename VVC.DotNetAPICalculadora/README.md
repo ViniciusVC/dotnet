@@ -49,13 +49,29 @@ crie o arquivo da classe model nesta pasta.
 
 ```
 
+# Punlish:
+```
+Publicar o projeto:
+sudo dotnet publish --framework net8.0 --runtime osx-x64
+
+Pasta de saida:
+/VVC.DotNetAPICalculadora/src/bin/Release/net8.0/osx-x64
+
+Rodar projeto publicado:
+/bin/Release/net8.0/osx-x64$ dotnet CalculadoraSimplesAPI.dll
+
+O projeto publicado(produção) roda na porta 5000.
+http://localhost:5000/api/
+```
+
+
 # docker
 ```
 Para gerar a imagem:
-$ sudo docker build . -t dotnet_api_calculadora_img
+$ sudo docker build . -t vvcdotnetapicalculadoraimg
 
 Criar um contêiner a partir da imagem que vc criou:
-$ sudo docker run -d -p 4000:5271 --name dotnet_api_calculadora dotnet_api_calculadora_img
+$ sudo docker run -d -p 5000:5271 --name dotnet_api_calculadora vvcdotnetapicalculadoraimg
 
 Para a execução do contêiner: 
 $ sudo docker stop dotnet_api_calculadora

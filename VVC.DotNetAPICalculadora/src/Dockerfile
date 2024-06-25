@@ -27,8 +27,8 @@ WORKDIR /runtimeapi
 # Copiar o aplicativo publicado para o contêiner
 COPY --from=build-env /app/out .
 
-# Expor a porta 8080 do contêiner.
-expose 8080
+# Expor a porta 5000 do contêiner.
+expose 5000
 
 # Definir o comando inicial do contêiner.
 ENTRYPOINT ["dotnet", "CalculadoraSimplesAPI.dll"]
