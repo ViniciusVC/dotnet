@@ -45,8 +45,11 @@ Crie o arquivo da classe na pasta Entities.
 ```
 
 
-
-
+Execute o contêiner a partir da imagem criada:
+```
+$ cd src
+$ sudo docker run -d -p 8080:80 --name DotNetAPIcontainer DotNetAPI
+```
 
 
 

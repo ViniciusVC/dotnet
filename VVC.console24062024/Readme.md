@@ -1,4 +1,4 @@
-## VVC.DotNetTerminal 
+## VVC.console24062014
 
 Este é um exemplo de projeto DotNet Core do tipo console.
 
@@ -16,20 +16,57 @@ https://github.com/ViniciusVC/dotnet/tree/main/VVC.DotNetTerminal
 
 # Comandos para criar esta aplicação:
 ```
-    1º Instalar o SDK do .NET:
-    $ sudo apt-get install -y dotnet-sdk-7.0
+// Instalar o SDK do .NET:
+$ sudo apt-get install -y dotnet-sdk-8.0
 
-    2º Crie uma pasta para o projeto:
-    $ mkdir projetoteste
+$ cd VVC.console24062024
+$ dotnet new sln
+$ mkdir cd VVC.console24062024.aplication
+$ cd VVC.console24062024.aplication
+$ dotnet new console
+$ cd ..
 
-    3º Entre na pasta:
-    $ cd projetoteste
+// Criar projeto teste
+$ dotnet new xunit -n VVC.console24062024.test
 
-    4º Iniciei um projeto de terminal:
-    $ dotnet new console
+// Adicionar projeto teste a Solução.
+$ dotnet sln VVC.console24062024.sln add VVC.console24062024.test/VVC.console24062024.test.csproj
+
+// referenciar projetos
+$ dotnet add VVC.console24062024.test/VVC.console24062024.test.csproj reference VVC.console24062024.aplication/VVC.console24062024.aplication.csproj
+
+
 ```
 
 # Rodar projeto:
 ```
-    $ dotnet run
+
+Rodar o projeto em dev.
+$ dotnet run
+
+Rodar os test.
+$ dotnet test
+
+Publicar aplicação.
+$ dotnet publish -c Release -o out 
+
+```
+
+# Docker
+```
+gerar o Imagem do Docker.
+$ sudo docker build -t console24062024 -f Dockerfile .
+
+listar Imagens no computador.
+$ sudo docker images
+
+Execute o contêiner a partir da imagem criada:
+$ sudo docker run -it --name console24062024container2 console24062024
+
+Verifique se o contêiner está rodando:
+$ docker ps
+
+parar conteiner
+$ sudo docker stop console24062024
+
 ```
