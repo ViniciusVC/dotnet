@@ -35,7 +35,6 @@ http://localhost:5271/swagger/index.html
 ```
 ![navegador swagger](docs/screenshot_swagger_dotnet.png "screenshot")
 
-
 # Controllers
 ```
 Apage os  arquivos controllers criados por padrão.

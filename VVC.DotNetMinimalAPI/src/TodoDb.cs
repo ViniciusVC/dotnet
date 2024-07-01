@@ -31,3 +31,6 @@ namespace TodoApi
     }
 
 }
+
+// Banco : TodoDb
+// Tabela : Todo

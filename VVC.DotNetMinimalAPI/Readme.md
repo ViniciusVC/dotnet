@@ -86,8 +86,17 @@ Include="microsoft.entityframeworkcore.inmemory" Version="7"
 ### Classe de contexto 
 /src/TodoDb.cs
 
-### endpoints:
-/src/Program.cs
+
+# endpoints:
+```
+(Get)/
+(Get)/todoitems
+(Get)/todoitems/complete
+(Get)/todoitems/{id}
+(Post)/todoitems
+(PUT)/todoitems/{id}
+(Delete)/todoitems/{id}
+```
 
 # Testar endpoints:
 ```

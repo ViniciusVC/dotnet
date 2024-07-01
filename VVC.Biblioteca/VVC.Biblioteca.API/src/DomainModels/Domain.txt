@@ -1,0 +1,4 @@
+DOMAIN :
+A camada de Domínio é responsável por todas as entidades, enumeração, exceções, abstrações(interfaces), 
+tipos e lógicas especificas ao seu domínio (Representão o mundio real).
+Projeto > Domain > Entidades

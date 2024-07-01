@@ -1,0 +1,4 @@
+Application:
+A camada de aplicação é responsável por toda a logica de sua aplicação.
+Ela depende da camada de domínio mas não tem dependencia com nenhuma outra camada ou projeto.
+Essa camada descreve abstrações que são implementadas nas camadas de fora.

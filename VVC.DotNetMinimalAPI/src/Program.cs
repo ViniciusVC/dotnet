@@ -15,10 +15,11 @@
 */
 
 
+    
 
 /*
     // Ignorar bibliotecas criadas por padrão
-    using System; //Manipular sitema operacional.
+using System; //Manipular sitema operacional.
     using System.Collections.Generic;
     using System.Diagnostics.Contracts;
     using System.Linq; // ṕara trabalhar com grande Conjunto de dados.
@@ -50,14 +51,24 @@ var app = builder.Build();
 
 
 // Endpoint=================================================
-app.MapGet("/", () => "Minimal APIs C Sharp");
-
+app.MapGet("/", () => 
+{
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("Minimal APIs C Sharp");
+    Console.ResetColor();
+    return "Minimal APIs C Sharp";
+});
 
 // Endpoint=================================================
 // simples. Todos os itens de tarefas pendentes.
 // http://localhost:5158/todoitems
-app.MapGet("/todoitems", async(TodoDb db) => await db.Todos.ToListAsync()); 
-
+app.MapGet("/todoitems", async(TodoDb db) => 
+{
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("[GET]/todoitems simples. Todos os itens de tarefas pendentes.");
+    Console.ResetColor();
+    await db.Todos.ToListAsync();
+}); 
 
 // Endpoint=================================================
 // retorna todos os itens.
@@ -81,12 +92,15 @@ app.MapGet("/todoitems/{id}", async(int id,TodoDb db) =>
 // Adicionar o objeto com a tarefa.
 app.MapPost("/todoitems", async(Todo todo,TodoDb db) => 
 {
-        //Console.writeLine("Endpoint POST. Recebe um objeto com a tarefa. Adicionar o objeto com a tarefa. Retorna o ID criado.");
-        db.Todos.Add(todo);
-        await db.SaveChangesAsync();
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("[Endpoint POST] Recebe um objeto com a tarefa. Adicionar o objeto com a tarefa. Retorna o ID criado.");
+    Console.ResetColor();
+
+    //db.Todos.Add(todo);
+    //await db.SaveChangesAsync();
         
-        return Results.Ok(todo);
-        //return Results.Created($"/todoitems/{todo.id}", todo); // Retorna o ID criado.
+    return Results.Ok(todo);
+    //return Results.Created($"/todoitems/{todo.id}", todo); // Retorna o ID criado.
 });
 
 
@@ -95,7 +109,8 @@ app.MapPost("/todoitems", async(Todo todo,TodoDb db) =>
 // Atualizar a informação do objeto se ele não for nulo.
 app.MapPut("/todoitems/{id}", async (int id, Todo inputTodo, TodoDb db) =>
 {
-    //Console.writeLine("Rota PUT. Atualizar a informação do objeto se ele não for nulo. Retorna mensagem de sucesso.");
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("Rota PUT. Atualizar a informação do objeto se ele não for nulo. Retorna mensagem de sucesso.");
     var todo = await db.Todos.FindAsync(id);
 
     if (todo is null) return Results.NotFound();
@@ -113,7 +128,8 @@ app.MapPut("/todoitems/{id}", async (int id, Todo inputTodo, TodoDb db) =>
 // Rota delete, passsa ID e Objeto.
 app.MapDelete("/todoitems/{id}", async (int id, TodoDb db) =>
 {
-    //Console.writeLine("Rota delete, rec recebe ID e Objeto. Retorna mensagem de sucesso ou não encontrado.");
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("Rota delete, rec recebe ID e Objeto. Retorna mensagem de sucesso ou não encontrado.");
     if (await db.Todos.FindAsync(id) is Todo todo)
     {
         db.Todos.Remove(todo);

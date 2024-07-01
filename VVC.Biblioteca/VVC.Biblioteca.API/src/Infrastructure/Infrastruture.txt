@@ -1,0 +1,4 @@
+Infrastructure:
+( UI / Presentation / WebApi / Client )
+A camada de infraestrutura é responsável por conter classes que acessem recursos externos a nossa aplicação, como por exemplo web services, e-mails ou mesmo acesso a disco.
+Essas classes devem implementar abstrações da camada de aplicação.
