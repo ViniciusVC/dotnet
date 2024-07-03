@@ -6,6 +6,10 @@ Projeto de exemplo ASP.NET MVC com Razor Pages, SQLite e login.
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
 
  
+Repositorio no GIT :
+https://github.com/ViniciusVC/dotnet/tree/main/VVC.SisCTRazorPages
+
+
 ## Criar o projeto Razor Pages (com Login).
 > dotnet new razor -o VVC.SisCTRazorPages -f net8.0 --auth Individual
 
@@ -25,6 +29,8 @@ Acesse o site do projeto em:
 http://localhost:5071
 (Confira a porta.)
 ```
+
+![telaapp](wwwroot/img/home_sisct.jpg "screenshot")
 
 Codigo:
 ```

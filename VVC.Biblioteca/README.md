@@ -42,7 +42,7 @@ http://localhost:5123/swagger/index.html
 Projeto Console
 \VVC.Biblioteca.Terminal> dotnet run
 ```
-![ProjetoConsolePrtSc](docs/terminal.jpg "PrtSc")
+![ProjetoConsolePrtSc](Docs/terminal.jpg "PrtSc")
 
 # Rodar Testes
 ```

@@ -38,14 +38,12 @@ Alguns projetos de .net
 ├── 📂 VVC.SisCTRazorpages
     (Projeto de exemplo ASP.NET MVC com Razor Pages, SQLite e login.)
 
-    
-
 ```
 
 # Principais comandos
 ```
 Instal dotnet core:
-$ sudo apt-get install -y dotnet-sdk-7.0
+$ sudo apt-get install -y dotnet-sdk-8.0
 
 Iniciei um projeto de terminal:
 $ dotnet new console --name nomedoprojeto
@@ -56,9 +54,9 @@ $ dotnet new webapi --name nomedoprojeto
 Rodar a aplicação:
 $ dotnet run
 
-Rodar a testes:
-$ dotnet test
+Rodar a aplicação atualizando automaticamente:
+$ dotnet watch run
 
-Rodar a aplicação atualisando automaticamente:
-$ dotnet wath run
+Rodar os testes:
+$ dotnet test
 ```
