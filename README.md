@@ -24,17 +24,19 @@ Alguns projetos de .net
 │       (teste unitario com xUnit) 
 │
 ├── 📂 VVC.DotNetAPI
-│   ([ERRO] .NET Core 8 - WEBAPI - C#)
+│   (Exemplo [ERRO] .NET Core 8 - WEBAPI - C#)
 │
 ├── 📂 VVC.DotNetAPICalculadora
-│   (.NET Core 8 - WEBAPI com calculadora - Docker - C#) 
+│   (Exemplo .NET Core 8 - WEBAPI com calculadora - Docker - C#) 
 │
 ├── 📂 VVC.DotNetMinimalAPI
-│   (.NET Core 8 - minimal API - C# ) 
+│   (Exemplo .NET Core 8 - minimal API - C# ) 
 │
 ├── 📂 VVC.DotNetTerminal
-    (.NET Core 8 - Terminal simples - C#)
-
+│   (Exemplo .NET Core 8 - Terminal simples - C#)
+│
+├── 📂 VVC.SisCTRazorpages
+    (Projeto de exemplo ASP.NET MVC com Razor Pages, SQLite e login.)
 
     
 
