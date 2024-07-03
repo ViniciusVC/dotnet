@@ -8,9 +8,20 @@ Alguns projetos de .net
 
 # Projetos neste repositorio
 ```
-│   
+│
 ├── 📂 testes_calculadora_xunit
 │   (Exemplo de teste unitario em .NET com xUnit) 
+│
+├── 📂 VVC.Biblioteca
+│   │ 
+│   ├── 📂 VVC.Biblioteca.API
+│   │   (WEBAPI - Docker) 
+│   │
+│   ├── 📂 VVC.Biblioteca.Terminal
+│   │   (Sistema via console)
+│   │
+│   ├── 📂 VVC.Biblioteca.Test
+│       (teste unitario com xUnit) 
 │
 ├── 📂 VVC.DotNetAPI
 │   ([ERRO] .NET Core 8 - WEBAPI - C#)
@@ -22,10 +33,10 @@ Alguns projetos de .net
 │   (.NET Core 8 - minimal API - C# ) 
 │
 ├── 📂 VVC.DotNetTerminal
-│   (.NET Core 8 - Terminal simples - C#)
-│
-├── 📂 VVC.console24062024
     (.NET Core 8 - Terminal simples - C#)
+
+
+    
 
 ```
 

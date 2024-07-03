@@ -9,16 +9,19 @@ https://github.com/ViniciusVC/dotnet/tree/main/testes_calculadora_xunit/
 
 # Projetos nesta Solução 
 ```
-/Calculadora
- (É um projeto de biblioteca de classes que podem ser referenciados a partir de aplicativos .NET Core)
-
-/calculos.tests
- (projeto de teste .NET com xUnit)
-
+📂 src
+│   
+├── 📂 /Calculadora
+│   projeto de biblioteca de classes
+│   Apenas para ser referenciados a partir de aplicativos .NET Core. 
+│   Não roda com RUN.
+│
+├── 📂 /calculos.tests
+    projeto de teste .NET com xUnit.
+    Codigos de test em CalculadoraTest.cs.
 ```
 Saida no terminal:
 ![teste xunit](docs/Screenshotteste_xunit.png "PrtSc")
-
 
 # Comandos usados para criar o projeto:
 ```
@@ -42,8 +45,7 @@ $ dotnet sln testes_calculadora_xunit add calculos.tests/calculos.tests.csproj
 
 E adicione nele a referência da biblioteca de calculos nele:
 $ dotnet add calculos.tests/calculos.tests.csproj reference calculos/calculos.csproj
-
-Rodar aos testes:
-$ dotnet test
-
 ```
+
+# Rodar aos testes:
+> dotnet test

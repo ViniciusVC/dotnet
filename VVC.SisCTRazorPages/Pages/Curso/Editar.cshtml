@@ -1,0 +1,47 @@
+@page
+@model VVC.SisCTRazorPages.Pages_Curso.EditarModel
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<h4>Curso</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Curso.Id" />
+            <div class="form-group">
+                <label asp-for="Curso.Titulo" class="control-label"></label>
+                <input asp-for="Curso.Titulo" class="form-control" />
+                <span asp-validation-for="Curso.Titulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Curso.StartDate" class="control-label"></label>
+                <input asp-for="Curso.StartDate" class="form-control" />
+                <span asp-validation-for="Curso.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Curso.EndDate" class="control-label"></label>
+                <input asp-for="Curso.EndDate" class="form-control" />
+                <span asp-validation-for="Curso.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Curso.AlunoId" class="control-label"></label>
+                <select asp-for="Curso.AlunoId" class="form-control" asp-items="ViewBag.AlunoId"></select>
+                <span asp-validation-for="Curso.AlunoId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+

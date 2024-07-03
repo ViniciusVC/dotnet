@@ -1,9 +1,9 @@
 
 ## VVC.Biblioteca
 
-Este é um exemplo de DotNet API, em codigo C#, codificado no VisualStudio.
+Projetinho de gerenciamento de biblioteca.
+Aqui temos alguns projetos exemplo de DotNet (API, Console e XUnit).
 
-/csharp_api/
 
 ![.NET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
@@ -42,7 +42,7 @@ http://localhost:5123/swagger/index.html
 Projeto Console
 \VVC.Biblioteca.Terminal> dotnet run
 ```
-![teste xunit](docs/terminal.jpg "PrtSc")
+![ProjetoConsolePrtSc](docs/terminal.jpg "PrtSc")
 
 # Rodar Testes
 ```
