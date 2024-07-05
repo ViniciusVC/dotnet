@@ -1,0 +1,6 @@
+@VVC.APICalculadoraXUnit.API_HostAddress = http://localhost:5003
+
+GET {{VVC.APICalculadoraXUnit.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

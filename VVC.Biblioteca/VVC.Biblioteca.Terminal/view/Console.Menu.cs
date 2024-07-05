@@ -8,23 +8,25 @@ namespace VVC.Biblioteca.Terminal{
 				Console.SetCursorPosition(3, 1);
             	Console.WriteLine("╔════════════════════════════════════════╗");
             	Console.SetCursorPosition(3, 2);
-				Console.WriteLine("║ SGB - SISTEMA GERENCIMENTO BIBLIOTECA  ║");
+				Console.WriteLine("║ SGB - SISTEMA GERENCIMENTO BIBLIOTECA  ║        .--.                   .---.   ");
 				Console.SetCursorPosition(3, 3);
-				Console.WriteLine("╚════════════════════════════════════════╝");
+				Console.WriteLine("╚════════════════════════════════════════╝    .---|__|           .-.     |~~~|   ");
+				Console.SetCursorPosition(3, 4);
+				Console.WriteLine("                                           .--|===|--|_          |_|     |~~~|--.");				
 				Console.SetCursorPosition(3, 5);
-				Console.WriteLine("╔════════════════════════════════════════╗");
+				Console.WriteLine("╔════════════════════════════════════════╗ |  |===|  |'\\     .---!~|  .--|   |--|");
 				Console.SetCursorPosition(3, 6);
-				Console.WriteLine("║  1 - Calculadora                       ║");
+				Console.WriteLine("║  1 - Calculadora                       ║ |%%|   |  |.'\\    |===| |--|%%|   |  |");
 				Console.SetCursorPosition(3, 7);
-				Console.WriteLine("║  2 - Gerenciar Livros                  ║");
+				Console.WriteLine("║  2 - Gerenciar Livros                  ║ |%%|   |  |\\.'\\   |   | |__|  |   |  |");
 				Console.SetCursorPosition(3, 8);
-				Console.WriteLine("║  3 - Gerenciar Clientes                ║");
+				Console.WriteLine("║  3 - Gerenciar Clientes                ║ |  |   |  | \\  \\  |===| |==|  |   |  |");
 				Console.SetCursorPosition(3, 9);
-				Console.WriteLine("║  4 - Gerenciar Emprestimos             ║");
+				Console.WriteLine("║  4 - Gerenciar Emprestimos             ║ |  |   |__|  \\.'\\ |   |_|__|  |~~~|__|");
 				Console.SetCursorPosition(3, 10);
-				Console.WriteLine("║  9 - sair do programa                  ║");
+				Console.WriteLine("║  9 - sair do programa                  ║ |  |===|--|   \\.'\\|===|~|--|%%|~~~|--|");
 				Console.SetCursorPosition(3, 11);
-				Console.WriteLine("╚════════════════════════════════════════╝");
+				Console.WriteLine("╚════════════════════════════════════════╝ ^--^---'--^    `-'`---^-^--^--^---'--'");
             }
 
             public void MostrarLivro() {

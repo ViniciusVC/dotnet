@@ -3,6 +3,7 @@ using VVCBotPessoal;
 
 Console.WriteLine("Bot iniciado...");
 var web = new AutomacaoWeb();
+var desenhoRobo = new DesenhoRobo();
 
 // abrir busca e click para o V-Editor.
 web.ClickVEditor();
