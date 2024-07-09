@@ -16,7 +16,7 @@ https://github.com/ViniciusVC/dotnet/tree/main/VVC.DotNetMinimalAPI
 Nota : 
 Minimal APIs não possui controllers. Ocultando classe host. Ideal para microsserviços.
 
-Neste projeto Dados não persistem, o banco de dados é in-memory.
+Este projeto não possui um banco de dados real apenas in-memory (os  Dados não persistem).
 
 # Rodar projeto:
 $ dotnet run
@@ -55,6 +55,7 @@ DELETE - "/todoitems/{id}"
 // Passsa ID e Objeto a ser deletado.
 // Ex.: http://localhost:5158/
 ```
+
 # Criar um projeto ASP.NET MinimalAPI:
 ```
 $ dotnet new web -n minimalapi

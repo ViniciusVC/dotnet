@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using Microsoft.EntityFrameworkCore;
-
 //using System.Data.Entity;
 using VVC.Biblioteca.API.Models;
 
@@ -16,7 +15,7 @@ namespace VVC.Biblioteca.API.Repositories
     public class ClienteRepository : IClienteRepository
     {
 
-        private readonly DbvvcbibliotecaContext_context;
+        private readonly DbvvcbibliotecaContext _context;
 
         public ClienteRepository(DbvvcbibliotecaContext Atualcontex)
         {

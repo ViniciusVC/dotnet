@@ -19,6 +19,7 @@ namespace VVC.Biblioteca.Terminal
 			UsarCalculadora usarCalculadora = new UsarCalculadora();
 			MenuLivroDB menuLivroDB = new MenuLivroDB();
 			MenuClienteDB menuClienteDB = new MenuClienteDB();
+			MenuEmprestimoDB menuEmprestimoDB = new MenuEmprestimoDB();
 			Sair sairPrograma = new Sair();
 			ErroMenu erroMenu = new ErroMenu();
 			ILogger logger = new ConsoleLogger();
@@ -34,22 +35,23 @@ namespace VVC.Biblioteca.Terminal
 				cki = Console.ReadKey();
 			    if(cki.Key == ConsoleKey.D1) 
 			    {
-			      	//Console.Write("Opcao 1");
 			      	logger.Log("Opcao 1");
 			      	usarCalculadora.Mostrar();
 			    }   
 			    else if(cki.Key == ConsoleKey.D2) 
 			    {
-			        //Console.Write("opcao 2");
 			        logger.Log("opcao 2"); 
 					menuLivroDB.MenuLivro();
 				}
 				else if(cki.Key == ConsoleKey.D3) 
 			    {
-			        //Console.Write("opcao 2");
 			        logger.Log("opcao 3"); 
-					// connection.TestStringMySQL();
 					menuClienteDB.MenuCliente();
+				}
+				else if(cki.Key == ConsoleKey.D4) 
+			    {
+			        logger.Log("opcao 4"); 
+					menuEmprestimoDB.MenuEmprestimo();
 				}
 			    else if(cki.Key == ConsoleKey.D9 || cki.Key == ConsoleKey.Escape) 
 			    {

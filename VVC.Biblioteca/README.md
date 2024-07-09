@@ -42,7 +42,8 @@ http://localhost:5123/swagger/index.html
 Projeto Console
 \VVC.Biblioteca.Terminal> dotnet run
 ```
-![ProjetoConsolePrtSc](Docs/terminal.jpg "PrtSc")
+![ProjetoConsolePrtSc](Docs/terminal.jpg "PrtScConsole")
+
 
 # Rodar Testes
 ```
@@ -94,9 +95,17 @@ VVC.Biblioteca.Test> dotnet test
 > dotnet add package MySql.Data
 > dotnet add package MySqlConnector
 
-
 // Instale o pacote DataAnnotations (Para criar modelos de dados).
 > dotnet add package System.ComponentModel.DataAnnotations
+
+Ler a string de conexão do appsettings.json.
+Ao contrário de um projeto ASP.NET Core, você precisa criar e ler o arquivo appsettings.json manualmente em um projeto .NET Console. E ler as configurações usando o IConfiguration.
+
+// Instale o Configuration.Json:
+> dotnet add package Microsoft.Extensions.Configuration.Json
+
+// Instale o Hosting:
+> dotnet add package Microsoft.Extensions.Hosting
 
 ```
 
@@ -116,7 +125,7 @@ VVC.Biblioteca.Test> dotnet test
 
 # Banco de Dados
 ```
-Baixar a imagem do Azure-SQL-Edge
+Baixar a imagem do MySQL
 c:/> docker pull mysql
 
 Rodar o banco de dados:
@@ -143,6 +152,7 @@ Veja mais no arquivo:
 /Docs/CriandoBancoBiblioteca.txt
 
 ```
+![DockerMySQLPrtSc](Docs/mysqldocker.jpg "PrtScMySql")
 
 # Docker
 ```

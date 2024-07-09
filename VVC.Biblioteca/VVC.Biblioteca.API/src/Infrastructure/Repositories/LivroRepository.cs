@@ -15,47 +15,47 @@ namespace VVC.Biblioteca.API.Repositories
     public class LivroRepository : ILivroRepository
     {
         
-        private readonly DbvvcbibliotecaContext bibliotecaContext;
+        private readonly DbvvcbibliotecaContext _context;
 
         public LivroRepository(DbvvcbibliotecaContext AtualContex)
         {
-            bibliotecaContext = AtualContex; // <- 
+            _context = AtualContex; // <- 
         }
 
         public void Alterar(Livro livro)
         {
             // Alterar um registro na tabela clinte.
-            bibliotecaContext.Entry(livro).State = EntityState.Modified;
+            _context.Entry(livro).State = EntityState.Modified;
         }
             
             //public void Excluir(int id)
         public void Excluir(Livro livro)
         {
             // Removendo um Livro.
-             bibliotecaContext.Livro.Remove(livro);
+             _context.Livro.Remove(livro);
         }
 
         public void Incluir(Livro livro)
         {
             // Incluir novo registro na tabela livro.
-            bibliotecaContext.Livro.Add(livro);
+            _context.Livro.Add(livro);
         }
 
         public Task<Livro> SelecionarByPk(int id)
         {
             // Buscando um livro.
-            return await bibliotecaContext.Livro.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return await _context.Livro.Where(x => x.Id == id).FirstOrDefaultAsync();
         }
             
         public Task<IEnumerable<Livro>> Selecionartodos()
         {
-           return await bibliotecaContext.Livro.ToListAsync();
+           return await _context.Livro.ToListAsync();
         }
           
         public async Task<bool> SaveAllAsync()
         {
-            return await bibliotecaContext.SaveChangesAsync() > 0;
-            //return await bibliotecaContext.SaveAllAsync() > 0;
+            return await _context.SaveChangesAsync() > 0;
+            //return await _context.SaveAllAsync() > 0;
         }
             
     }

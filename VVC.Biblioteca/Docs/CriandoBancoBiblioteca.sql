@@ -63,7 +63,7 @@ INSERT INTO Cliente (cliCPF, cliNome, cliEndereco, cliCidade, cliBairro, cliNume
 -- conferir a carda de dados em Cliente.
 select * from Cliente;
 
--- Carregar dados na tabela Livro
+-- Carregar dados na tabela Livro.
 INSERT INTO Livro ( livroNome, livroAutor, livroEditora, livroAnoPublicacao, livroEdicao) VALUES 
 ('O Senhor dos Anéis: A Sociedade do Anel', 'J.R.R. Tolkien', 'HarperCollins', '1954-01-01 14:30:00' , '1ª edição'),
 ('1984', 'George Orwell', 'Companhia das Letras', '1949-01-01 14:30:00', '1ª edição'),
@@ -73,3 +73,38 @@ INSERT INTO Livro ( livroNome, livroAutor, livroEditora, livroAnoPublicacao, liv
 ('O Grande Gatsby', 'F. Scott Fitzgerald', 'Scribner', '1925-01-01 14:30:00', '1ª edição');
 
 select * from Livro;
+
+-- Primeiro insert de emprestimos.
+INSERT INTO Cliente (cliCPF, cliNome, cliEndereco, cliCidade, cliBairro, cliNumero, cliTelefoneCelular, cliTelefoneFixo, cliEmail) VALUES (
+'466.490.900-42', 'Pedro Pinto da Pedra', 'Rua das Carmelias Ricas', 'Bumenal', 'Gardenia Azul', '1423', '3132323232', '2141411414', 'pedropedra95@bol.com.br'
+)
+
+-- Primeiro insert de emprestimos.
+INSERT INTO Livro_Cliente_Emprestimo( LceldCliente, LceldLivro, LceldEmprestimo, LceldEntrega, LceldEntregue) VALUES (1,2,'2019-05-05','2019-06-16',1);
+
+-- Insert de emprestimos não devolvidos.
+INSERT INTO Livro_Cliente_Emprestimo( LceldCliente, LceldLivro, LceldEmprestimo, LceldEntregue) VALUES
+(1,3,'2020-06-25',0),
+(2,2,'2020-05-20',0),
+(4,5,'2020-04-10',0);
+
+-- Verificar os cadastros de emprestimos:
+select * from Livro_Cliente_Emprestimo;
+	
+-- listar livros emprestados.
+select l.id, l.livroNome, c.id, c.cliCPF, c.cliNome, e.LceldEmprestimo  from Cliente c JOIN Livro_Cliente_Emprestimo e ON c.id=e.LceldCliente JOIN Livro l ON e.LceldLivro = l.id WHERE e.LceldEntregue=0 Order By e.LceldEmprestimo;
+
+-- listar livros com um cliente (id=2).
+select l.id, l.livroNome, c.id, c.cliCPF, c.cliNome, e.LceldEmprestimo  from Cliente c JOIN Livro_Cliente_Emprestimo e ON c.id=e.LceldCliente JOIN Livro l ON e.LceldLivro = l.id WHERE e.LceldEntregue=0 AND c.id=2 Order By e.LceldEmprestimo;
+
+--Pegar livro emprestimos.
+INSERT INTO Livro_Cliente_Emprestimo( LceldCliente, LceldLivro, LceldEmprestimo, LceldEntrega, LceldEntregue) VALUES (1,2,'2019-05-05','2019-06-16',1);
+
+-- Devolver livro (informe o id docliente e o id=4 do livbro=5)
+select l.id, l.livroNome, c.id, c.cliCPF, c.cliNome, e.LceldEmprestimo  from Cliente c JOIN Livro_Cliente_Emprestimo e ON c.id=e.LceldCliente JOIN Livro l ON e.LceldLivro = l.id WHERE e.LceldEntregue=0 AND c.id=4 AND l.id=5;
+-- Confirme o livro (S).
+-- Informar Data de entrega 
+Update Livro_Cliente_Emprestimo Set LceldEntrega='2020-05-13', LceldEntregue=true Where LceldCliente=4 AND LceldLivro=5;
+
+
+Order By LceldEmprestimo 

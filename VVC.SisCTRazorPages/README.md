@@ -1,4 +1,4 @@
-# dotnet
+# Razor Pages
 
 Projeto de exemplo ASP.NET MVC com Razor Pages, SQLite e login.
 
