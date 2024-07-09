@@ -46,18 +46,3 @@ ___________________________________________________________
 
 // 4. Crie o modelo de Entity Framework Core executando o seguinte comando:
 > dotnet ef dbcontext scaffold "Data Source=127.0.0.1:3306;Initial Catalog=dbvvcbiblioteca;Persist Security Info=True;User ID=root;Encrypt=False" MySql.EntityFrameworkCore -o sakila -f
-
-___________________________________________________________
-
-# Lixo
-
-(Não funcionaram)
-
-// 4. Crie o modelo de Entity Framework Core executando o seguinte comando:
-> dotnet ef dbcontext scaffold "Data Source=127.0.0.1:3306;Initial Catalog=dbvvcbiblioteca;Persist Security Info=True;User ID=root;Encrypt=False" MySql.EntityFrameworkCore -o sakila -f
-
-// Rode o scaffold
-> dotnet ef dbcontext scaffold "Server=127.0.0.1:3306;Database=dbvvcbiblioteca;User Id=root;Password=senharoot;" MySql.EntityFrameworkCore
-
-// Depois de instalar o pacote, você pode executar o comando > dotnet ef dbcontext scaffold 
-// Para gerar as classes de dados do seu banco de dados MySQL.

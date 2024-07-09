@@ -2,6 +2,6 @@
 using VVCBotPessoal;
 
 Console.WriteLine("Bot iniciado...");
-var web = new AutomacaoWeb();
-var desenhoRobo = new DesenhoRobo();
-web.iniciarAutomacoes();
+var web = new Menu();
+//web.iniciarAutomacoes();
+web.MenuBot();

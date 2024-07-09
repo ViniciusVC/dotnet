@@ -12,6 +12,9 @@ Alguns projetos de .net
 ├── 📂 testes_calculadora_xunit
 │   (Exemplo de teste unitario em .NET com xUnit) 
 │
+├── 📂 VVC.APICalculadora_xunit
+│   (Exemplo de teste unitario em API .NET com xUnit) 
+│
 ├── 📂 VVC.Biblioteca
 │   │ 
 │   ├── 📂 VVC.Biblioteca.API
@@ -23,11 +26,17 @@ Alguns projetos de .net
 │   ├── 📂 VVC.Biblioteca.Test
 │       (teste unitario com xUnit) 
 │
+├── 📂 VVC.BotPessoal
+│   (Exemplo de bot com .NET e Selenium)
+│
 ├── 📂 VVC.DotNetAPI
 │   (Exemplo [ERRO] .NET Core 8 - WEBAPI - C#)
 │
 ├── 📂 VVC.DotNetAPICalculadora
 │   (Exemplo .NET Core 8 - WEBAPI com calculadora - Docker - C#) 
+│
+├── 📂 VVC.DotNetApiCrud
+│   (Exemplo .NET - API - com Crud em SQLite )
 │
 ├── 📂 VVC.DotNetMinimalAPI
 │   (Exemplo .NET Core 8 - minimal API - C# ) 

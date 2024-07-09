@@ -1,6 +1,8 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
+using Microsoft.EntityFrameworkCore; // Banco de Dados;
+
 namespace VVCBotPessoal
 {
 
@@ -8,6 +10,7 @@ namespace VVCBotPessoal
     {
 
         public IWebDriver driver;
+        
 
         public LevantamentoAcoes(ChromeDriver drivertemp)
         {
@@ -17,7 +20,6 @@ namespace VVCBotPessoal
         public void CarteiraAcoes()
         {
             
-
             // criando lista de ações. 
             List<AcaoModel> varAcoes = new List<AcaoModel>
             {
@@ -34,25 +36,25 @@ namespace VVCBotPessoal
 
         private void CapturarAcao(string acaoSigla, string acaoNome, string acaoURL, string xPath)
         {
-          // Tabela ValorAcaoModel
-          ValorAcaoModel valorAcao = new ValorAcaoModel();
-          valorAcao.Sigla = acaoSigla;
+
           try{
+
             Console.WriteLine("╔═══════════════════════════════");
             Console.WriteLine("║ Abrindo ações do "+acaoNome+".");
             driver.Navigate().GoToUrl(acaoURL);
 
-            Console.WriteLine("║ Capturando valor da ação ("+valorAcao.Sigla+").");
+            Console.WriteLine("║ Capturando valor da ação ("+acaoSigla+").");
             string valorStrg =  driver.FindElement(By.XPath(xPath)).Text;
-            valorAcao.Valor = Convert.ToDecimal(valorStrg); //valorStrg.Replace(",", ".")
-
-
+            
+            
             Console.WriteLine("║---------------------------------");
             DateTime currentDate = DateTime.Today;
-            //string formattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            valorAcao.DataCotacao = DateTime.Now.ToString("dd-MM-yyyy");
-            Console.WriteLine("║ Valor : "+valorAcao.Valor +" em "+valorAcao.DataCotacao);
+            string dataCotacao = DateTime.Now.ToString("yyyy-MM-dd");
+            Console.WriteLine("║ Valor : "+valorStrg + " em "+dataCotacao);
             Console.WriteLine("╚═══════════════════════════════");
+            
+            var valorAcoesManipulaBD = new ValorAcoesManipulaBD();
+            valorAcoesManipulaBD.GravarValorAcoesAsync(acaoSigla,valorStrg,dataCotacao);
 
           }catch(Exception e){
             Console.WriteLine("ERRO com ações do "+acaoNome+".");

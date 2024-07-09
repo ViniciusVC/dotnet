@@ -12,9 +12,9 @@ Repositorio no GIT :
 https://github.com/ViniciusVC/dotnet/tree/main/VVC.BotPessoa
 
 # Rodar projeto:
-```
-    $ dotnet run
-```
+
+> $ dotnet run
+
 ![DockerMySQLPrtSc](Docs/botpessoal.jpg "PrtScMySql")
 
 ## Instalar o DotNet no Ubuntu:
@@ -69,3 +69,49 @@ Veja mais no arquivo:
 
 ```
 ![DockerMySQLPrtSc](Docs/mysqldocker.jpg "PrtScMySql")
+
+
+
+Confirmar se o EF está instalado no seu projeto:
+
+> dotnet ef
+
+Se não estiver instale o ef (Entity Framework) como uma ferramenta global:
+
+> dotnet tool install --global dotnet-ef
+
+## 1º Instalar o EF
+
+Instale EF no seu projeto:
+
+> dotnet add package Microsoft.EntityFrameworkCore
+
+## 2º Instalar o pacote para o Banco de Dados que irá usar.
+
+instalar o SQLite para EF:
+
+> dotnet add package MySql.EntityFrameworkCore
+
+No CONTEXT declare que a classe estudante é uma tabela.
+
+> private DbSet< ValorAcao > Estudantes(get;set;)
+
+
+Instale o pacote Microsoft.EntityFrameworkCore.Design:
+> dotnet add package Microsoft.EntityFrameworkCore.Design
+
+Instale o pacote Microsoft.EntityFrameworkCore.Tools:
+> dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+Criar migração:
+> dotnet ef migrations add Inicial
+
+ (Gera scripts para migração)
+
+Inicial é o nome da migração
+
+Aplicar migração o add ao banco:
+
+> dotnet ef database update
+
+ (Gera as tabelas no SQLite, baseado nas nossas classes)

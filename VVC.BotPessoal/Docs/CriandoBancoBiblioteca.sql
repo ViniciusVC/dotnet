@@ -10,7 +10,7 @@ CREATE DATABASE dbvvcinvestimentos;
 use dbvvcinvestimentos;
 
 -- Crie a tabela Cliente.
-CREATE TABLE valorAcao (
+CREATE TABLE ValorAcao (
     id INT AUTO_INCREMENT PRIMARY KEY,
     Sigla VARCHAR(200),
     DataCotacao Date,
@@ -22,16 +22,16 @@ CREATE TABLE valorAcao (
 SHOW TABLES;
 
 -- Primeiro insert de teste na tabela 
-INSERT INTO valorAcao (Sigla, DataCotacao, Valor) VALUES 
+INSERT INTO ValorAcao (Sigla, DataCotacao, Valor) VALUES 
 ('Alphabet BDR', '2024-07-08', 8690);
 
 -- Popular a tabela Cliente.
-INSERT INTO valorAcao (Sigla, DataCotacao, Valor) VALUES 
+INSERT INTO ValorAcao (Sigla, DataCotacao, Valor) VALUES 
  ('IBM NYSE', '08-07-2024', 17602),
  ('XOM', '08-07-2024', 11337);
 
 -- conferir a carda de dados em Cliente.
-select * from valorAcao;
+select * from ValorAcao;
 
 
 /*

@@ -10,7 +10,7 @@ Este é um exemplo de DotNet API com CRUD.
 ![Vscode](https://img.shields.io/badge/Vscode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 
-https://github.com/ViniciusVC/dotnet/tree/main/VVC.DotNetAPI
+https://github.com/ViniciusVC/dotnet/tree/main/VVC.DotNetApiCrud
 
 
 # Instale o EntityFramework :
@@ -30,8 +30,6 @@ webapi : Projeto Web API
 
 -minimal : Proejeto sem CONTROLLER
 
-
-(Nota swagger foi descontinuado)
 
 Criar classes Controller, Model e Context.
 
@@ -69,6 +67,16 @@ Aplicar migração o add ao banco:
 
  (Gera as tabelas no SQLite, baseado nas nossas classes)
 
+### Rodar projeto:
+
+> \src>dotnet run
+
+![cdmApiCrudPrtSc](Docs/cdmApiCrud.jpg "PrtCmdApiCrud")
+
 
 ## Swagger:
 > http://localhost:5297/swagger/index.html
+
+![SwaggerApiCrudPrtSc](Docs/SwaggerApiCrud.jpg "PrtScSwaggerApiCrud")
+
+(Nota swagger foi descontinuado)
