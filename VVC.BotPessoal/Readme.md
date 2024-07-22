@@ -87,31 +87,16 @@ Instale EF no seu projeto:
 > dotnet add package Microsoft.EntityFrameworkCore
 
 ## 2º Instalar o pacote para o Banco de Dados que irá usar.
-
+```
 instalar o SQLite para EF:
-
 > dotnet add package MySql.EntityFrameworkCore
 
 No CONTEXT declare que a classe estudante é uma tabela.
-
 > private DbSet< ValorAcao > Estudantes(get;set;)
-
 
 Instale o pacote Microsoft.EntityFrameworkCore.Design:
 > dotnet add package Microsoft.EntityFrameworkCore.Design
 
 Instale o pacote Microsoft.EntityFrameworkCore.Tools:
 > dotnet add package Microsoft.EntityFrameworkCore.Tools
-
-Criar migração:
-> dotnet ef migrations add Inicial
-
- (Gera scripts para migração)
-
-Inicial é o nome da migração
-
-Aplicar migração o add ao banco:
-
-> dotnet ef database update
-
- (Gera as tabelas no SQLite, baseado nas nossas classes)
+```

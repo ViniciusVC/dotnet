@@ -1,4 +1,4 @@
-//using VVCAPICalculadoraXUnit.Models;
+using VVCAPICalculadoraXUnit.Models;
 using Xunit; // Usar Biblioteca Xunit.
 
 namespace VVC.APICalculadoraXUnit.Tests
@@ -9,8 +9,8 @@ namespace VVC.APICalculadoraXUnit.Tests
     [Fact]
     public void Soma_DeveRetornarOValorCorreto()
     {
-        Calculadora calc = new Calculadora(10, 20); // O construtor recebe 2 parametros.
-        calc.somar(); // Metodo somar da entidade calculadora.
+        var calc = new Calculadora(10, 20); // O construtor recebe 2 parametros.
+        calc.Somar(); // Metodo somar da entidade calculadora.
 
         //Verifica se o resultado é igual a 30        
         

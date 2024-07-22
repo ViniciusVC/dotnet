@@ -16,7 +16,7 @@ Hostname : 127.0.0.1
 Port : 3306
 Username : root
 senha : senharoot
-Banco de Dados : dbvvcbiblioteca
+Banco de Dados : dbvvcinvestimentos
 
 ### C sharp
 string connectionString = "Server=127.0.0.1;Port=3306;Database=dbvvcbiblioteca;Uid=root;Pwd=senharoot;";

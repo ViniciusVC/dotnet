@@ -20,39 +20,40 @@ GitHub : https://github.com/ViniciusVC/dotnet/tree/main/VVC.APICalculadoraXUnit/
 ```
 
 Saida no terminal:
-![teste xunit](docs/Screenshotteste_xunit.png "PrtSc")
+
+![teste xunit](Docs/Screenshotteste_xunit.png "PrtSc")
 
 # Criar a solução:
 > dotnet new sln -n VVC.APICalculadoraXUnit
 
-# Projeto API:
-```
-Criar um projeto API:
-$ dotnet new webapi -n VVC.APICalculadoraXUnit.API
+# Criar um projeto API:
+> dotnet new webapi -n VVC.APICalculadoraXUnit.API
 
-```
-### Rorando projeto API
-```
-// Rodar projeto: 
-$ dotnet run
 
-// Rodar com atualização automatica:
-$ dotnet watch run
+# Rodando projeto API
+> cd VVC.APICalculadoraXUnit.API
 
-// Rodar o projeto de dentro do diretorio da solução:
-$ dotnet run --project ./VVC.APICalculadoraXUnit.API/VVC.APICalculadoraXUnit.API.csproj
-```
+Rodar projeto: 
+>  dotnet run
 
-![terminal API](docs/sreenshot_terinal_dotnet.png "screenshot")
+Rodar com atualização automatica:
+> dotnet watch run
+
+Rodar o projeto de fora do diretorio:
+> dotnet run --project ./VVC.APICalculadoraXUnit.API/VVC.APICalculadoraXUnit.API.csproj
+
+Saida:
+
+![terminal API](Docs/sreenshot_terinal_dotnet.png "screenshot")
 
 
 ### Swagger
 ```
 Swagger é um front apenas para teste de API.
 Abre uma pagina em com Swagger em:
-http://localhost:50031/swagger/index.html
+http://localhost:5003/swagger/index.html
 ```
-![navegador swagger](docs/screenshot_swagger_dotnet.jpg "screenshot")
+![navegador swagger](Docs/screenshot_swagger_dotnet.jpg "screenshot")
 
 Criar classe
 ```

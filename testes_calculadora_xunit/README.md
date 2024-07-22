@@ -21,6 +21,7 @@ https://github.com/ViniciusVC/dotnet/tree/main/testes_calculadora_xunit/
     Codigos de test em CalculadoraTest.cs.
 ```
 Saida no terminal:
+
 ![teste xunit](docs/Screenshotteste_xunit.png "PrtSc")
 
 # Comandos usados para criar o projeto:
@@ -48,4 +49,7 @@ $ dotnet add calculos.tests/calculos.tests.csproj reference calculos/calculos.cs
 ```
 
 # Rodar aos testes:
+
+>cd src
+
 > dotnet test

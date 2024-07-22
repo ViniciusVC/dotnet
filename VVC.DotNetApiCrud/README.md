@@ -71,12 +71,12 @@ Aplicar migração o add ao banco:
 
 > \src>dotnet run
 
-![cdmApiCrudPrtSc](Docs/cdmApiCrud.jpg "PrtCmdApiCrud")
+![cdmApiCrudPrtSc](docs/cdmApiCrud.jpg "PrtCmdApiCrud")
 
 
 ## Swagger:
 > http://localhost:5297/swagger/index.html
 
-![SwaggerApiCrudPrtSc](Docs/SwaggerApiCrud.jpg "PrtScSwaggerApiCrud")
+![SwaggerApiCrudPrtSc](docs/SwaggerApiCrud.jpg "PrtScSwaggerApiCrud")
 
 (Nota swagger foi descontinuado)
