@@ -1,0 +1,6 @@
+@VVCDotNetAPILogin.API_HostAddress = http://localhost:5192
+
+GET {{VVCDotNetAPILogin.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

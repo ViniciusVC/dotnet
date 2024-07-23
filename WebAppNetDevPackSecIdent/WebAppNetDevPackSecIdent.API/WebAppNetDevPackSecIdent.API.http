@@ -1,0 +1,6 @@
+@WebAppNetDevPackSecIdent.API_HostAddress = http://localhost:5000
+
+GET {{WebAppNetDevPackSecIdent.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -12,12 +12,13 @@ namespace VVC.APICalculadoraXUnit.Tests
         var calc = new Calculadora(10, 20); // O construtor recebe 2 parametros.
         calc.Somar(); // Metodo somar da entidade calculadora.
 
+        int resposta = int.Parse(calc);
         //Verifica se o resultado é igual a 30        
         
         //Assert.AreEqual(30, resultado); // Erro - 'Assert' does not contain a definition for 'AreEqual'
         //Assert.That(30, Is.EqualTo(resultado)); // Erro - 'Assert' does not contain a definition for 'That' 
         //ClassicAssert.AreEqual(30, resultado); // Erro - The name 'ClassicAssert' does not exist in the current context 
-        Assert.Equal(30, calc);
+        Assert.Equal(30, resposta);
     }
 
     // A tag Theory executa o mesmo teste com uma série de parâmetros. 

@@ -1,0 +1,136 @@
+E:\VVCDotNetAPILogin\VVCDotNetAPILogin.API>dotnet ef migrations add v1
+Build started...
+Build succeeded.
+The Entity Framework tools version '8.0.6' is older than that of the runtime '8.0.7'. Update the tools for the latest features and bug fixes. See https://aka.ms/AAc1fbw for more information.
+Done. To undo this action, use 'ef migrations remove'
+
+E:\organizando\projetos\2024\dotnet\VVCDotNetAPILogin\VVCDotNetAPILogin.API>dotnet ef database update
+Build started...
+Build succeeded.
+The Entity Framework tools version '8.0.6' is older than that of the runtime '8.0.7'. Update the tools for the latest features and bug fixes. See https://aka.ms/AAc1fbw for more information.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='dbvvclogin' AND TABLE_NAME='__EFMigrationsHistory';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (302ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `__EFMigrationsHistory` (
+          `MigrationId` varchar(150) NOT NULL,
+          `ProductVersion` varchar(32) NOT NULL,
+          PRIMARY KEY (`MigrationId`)
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='dbvvclogin' AND TABLE_NAME='__EFMigrationsHistory';
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT `MigrationId`, `ProductVersion`
+      FROM `__EFMigrationsHistory`
+      ORDER BY `MigrationId`;
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20240723153331_v1'.
+Applying migration '20240723153331_v1'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (207ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `AspNetRoles` (
+          `Id` varchar(255) NOT NULL,
+          `Name` varchar(256) NULL,
+          `NormalizedName` varchar(256) NULL,
+          `ConcurrencyStamp` longtext NULL,
+          PRIMARY KEY (`Id`)
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (170ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `AspNetUsers` (
+          `Id` varchar(255) NOT NULL,
+          `avatar` longtext NOT NULL,
+          `UserName` varchar(256) NULL,
+          `NormalizedUserName` varchar(256) NULL,
+          `Email` varchar(256) NULL,
+          `NormalizedEmail` varchar(256) NULL,
+          `EmailConfirmed` tinyint(1) NOT NULL,
+          `PasswordHash` longtext NULL,
+          `SecurityStamp` longtext NULL,
+          `ConcurrencyStamp` longtext NULL,
+          `PhoneNumber` longtext NULL,
+          `PhoneNumberConfirmed` tinyint(1) NOT NULL,
+          `TwoFactorEnabled` tinyint(1) NOT NULL,
+          `LockoutEnd` datetime NULL,
+          `LockoutEnabled` tinyint(1) NOT NULL,
+          `AccessFailedCount` int NOT NULL,
+          PRIMARY KEY (`Id`)
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (192ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `AspNetRoleClaims` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `RoleId` varchar(255) NOT NULL,
+          `ClaimType` longtext NULL,
+          `ClaimValue` longtext NULL,
+          PRIMARY KEY (`Id`),
+          CONSTRAINT `FK_AspNetRoleClaims_AspNetRoles_RoleId` FOREIGN KEY (`RoleId`) REFERENCES `AspNetRoles` (`Id`) ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (208ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `AspNetUserClaims` (
+          `Id` int NOT NULL AUTO_INCREMENT,
+          `UserId` varchar(255) NOT NULL,
+          `ClaimType` longtext NULL,
+          `ClaimValue` longtext NULL,
+          PRIMARY KEY (`Id`),
+          CONSTRAINT `FK_AspNetUserClaims_AspNetUsers_UserId` FOREIGN KEY (`UserId`) REFERENCES `AspNetUsers` (`Id`) ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (193ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `AspNetUserLogins` (
+          `LoginProvider` varchar(255) NOT NULL,
+          `ProviderKey` varchar(255) NOT NULL,
+          `ProviderDisplayName` longtext NULL,
+          `UserId` varchar(255) NOT NULL,
+          PRIMARY KEY (`LoginProvider`, `ProviderKey`),
+          CONSTRAINT `FK_AspNetUserLogins_AspNetUsers_UserId` FOREIGN KEY (`UserId`) REFERENCES `AspNetUsers` (`Id`) ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (226ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `AspNetUserRoles` (
+          `UserId` varchar(255) NOT NULL,
+          `RoleId` varchar(255) NOT NULL,
+          PRIMARY KEY (`UserId`, `RoleId`),
+          CONSTRAINT `FK_AspNetUserRoles_AspNetRoles_RoleId` FOREIGN KEY (`RoleId`) REFERENCES `AspNetRoles` (`Id`) ON DELETE CASCADE,
+          CONSTRAINT `FK_AspNetUserRoles_AspNetUsers_UserId` FOREIGN KEY (`UserId`) REFERENCES `AspNetUsers` (`Id`) ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (152ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE `AspNetUserTokens` (
+          `UserId` varchar(255) NOT NULL,
+          `LoginProvider` varchar(255) NOT NULL,
+          `Name` varchar(255) NOT NULL,
+          `Value` longtext NULL,
+          PRIMARY KEY (`UserId`, `LoginProvider`, `Name`),
+          CONSTRAINT `FK_AspNetUserTokens_AspNetUsers_UserId` FOREIGN KEY (`UserId`) REFERENCES `AspNetUsers` (`Id`) ON DELETE CASCADE
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (122ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_AspNetRoleClaims_RoleId` ON `AspNetRoleClaims` (`RoleId`);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (117ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX `RoleNameIndex` ON `AspNetRoles` (`NormalizedName`);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (151ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_AspNetUserClaims_UserId` ON `AspNetUserClaims` (`UserId`);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (129ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_AspNetUserLogins_UserId` ON `AspNetUserLogins` (`UserId`);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (152ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `IX_AspNetUserRoles_RoleId` ON `AspNetUserRoles` (`RoleId`);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (308ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX `EmailIndex` ON `AspNetUsers` (`NormalizedEmail`);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (148ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE UNIQUE INDEX `UserNameIndex` ON `AspNetUsers` (`NormalizedUserName`);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO `__EFMigrationsHistory` (`MigrationId`, `ProductVersion`)
+      VALUES ('20240723153331_v1', '8.0.7');
+Done.
