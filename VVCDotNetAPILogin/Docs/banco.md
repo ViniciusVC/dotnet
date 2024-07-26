@@ -53,4 +53,17 @@ mysql : Usar a imagem do MySQL
 # String conection
 > Server=127.0.0.1;Port=3306;Database=dbvvclogin;Uid=root;Pwd=senharoot;
 
+# SQL
+-- Mostrar bancos existentes no SGBD.
+Show databases;
+
+-- Usar o banco dbvvclogin.
+use dbvvclogin;
+
+-- Mostrar tabelas existentes no banco dbvvclogin.
+show tables;
+
+-- Listar usuarios cadastrdos.
+select * from AspNetUsers;
+
 

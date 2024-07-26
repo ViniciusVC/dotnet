@@ -1,10 +1,9 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 //using Google.Protobuf.WellKnownTypes;
-//using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-
 using Microsoft.EntityFrameworkCore;
-
 //using Microsoft.Extensions.DependencyInjection;
-
 using VVCDotNetIdentityAPI.Data;
 using VVCDotNetIdentityAPI.Models;
 
@@ -31,7 +30,13 @@ builder.Services
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => " Ok. Projeto VVCDotNetIdentity.");
+app.MapGet("/logado", ()=>" Ok. Logado no Projeto VVCDotNetIdentity.").RequireAuthorization();
+app.MapPost("/logout", 
+    async (SignInManager<User> signInManager, [FromBody] object empty) => {
+        await signInManager.SignOutAsync();
+        return Results.Ok(); // Retorna codigo 200
+    });
 
 app.MapIdentityApi<User>();
 

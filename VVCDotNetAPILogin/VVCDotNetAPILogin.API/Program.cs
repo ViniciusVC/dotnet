@@ -1,13 +1,35 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+
+using Google.Protobuf.WellKnownTypes;
+using Microsoft.Extensions.DependencyInjection;
+
 using Microsoft.EntityFrameworkCore;
 using VVCDotNetAPILogin.API.Models;
 using VVCDotNetAPILogin.API.Data;
 
+// https://learn.microsoft.com/pt-br/aspnet/core/security/cors?view=aspnetcore-8.0
+// var MyAllowSpecificOrigins = "_myAllowSpecificOrigins"; // Configurando o CORS com política nomeada e middleware.
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+/*
+//---Configurar-CORS------------------
+// https://learn.microsoft.com/pt-br/aspnet/core/security/cors?view=aspnetcore-8.0
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+//---Configurar-CORS------------------
+*/
+
 
 //var connection = Configuration["ConexaoMySql:MySqlConnectionString"];
             
@@ -17,16 +39,21 @@ builder.Services.AddDbContext<AppDbContext>(
     //options => options.UseMySql(connection)
 );
 
+
+
 builder.Services.AddAuthentication(); // Quem é.
 builder.Services.AddAuthorization(); // Quais permições tem.
 
-builder.Services //IServiceCollection
+builder.Services 
 .AddIdentityApiEndpoints<User>()
 .AddEntityFrameworkStores<AppDbContext>();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Roda o Swagger penas em desenvolvimento.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -35,7 +62,25 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", ()=>"Hello World");
+//---Configurar-CORS------------------
+//app.UseCors("AllowAllOrigins");
+//---Configurar-CORS------------------
+
+
+//app.MapSwagger().RequireAuthorization();
+app.MapGet("/", ()=>" Hello World. Projeto DotNet API com login de usuário, usando o Identity API.");
+    // Retorna codigo 200
+
+app.MapGet("/logado", ()=>"Você está logado.").RequireAuthorization();
+    // Retorna codigo 200 se estiver logado.
+
+app.MapPost("/logout", 
+    async (SignInManager<User> signInManager, [FromBody] object empty) => {
+        await signInManager.SignOutAsync();
+        return Results.Ok(); 
+        // Retorna codigo 200
+    });
+
 
 app.MapIdentityApi<User>();
 

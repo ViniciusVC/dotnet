@@ -45,7 +45,15 @@ Alguns projetos de .net
 │   (Exemplo .NET Core 8 - Terminal simples - C#)
 │
 ├── 📂 VVC.SisCTRazorpages
-    (Projeto de exemplo ASP.NET MVC com Razor Pages, SQLite e login.)
+│   (Projeto de exemplo ASP.NET MVC com Razor Pages, SQLite e login.)
+│
+├── 📂 VVCDotNetAPILogin
+│   │ 
+│   ├── 📂 VVCDotNetAPILogin.API
+│   │   (Exemplo de login de usuário, usando o DotNet Identity API e Swagger.)
+│
+├── 📂 VVC.VVCDotNetIdentityAPI
+    (Exemplo DotNet Identity API em Minimal API.)
 
 ```
 
@@ -57,7 +65,7 @@ $ sudo apt-get install -y dotnet-sdk-8.0
 Iniciei um projeto de terminal:
 $ dotnet new console --name nomedoprojeto
 
-Iniciei um projeto de API:
+Iniciei um projeto de Web API:
 $ dotnet new webapi --name nomedoprojeto
 
 Rodar a aplicação:

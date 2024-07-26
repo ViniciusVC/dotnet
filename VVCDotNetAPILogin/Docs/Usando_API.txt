@@ -1,0 +1,75 @@
+
+_______________________________________________
+# Verifiocar se API esta de pé.
+[GET] http://localhost:5192/
+Retorna : Code 200, body "Hello World. Projeto DotNet API com login de usuário, usando o Identity API."
+
+_______________________________________________
+# Criar usuário:
+
+Registrando um usuário:
+
+Senha:
+	Senha com 6 caracteres.
+	Letras Maiusculas e Minuscula.
+	um caracter especial.
+
+Ex.: 
+	[GET] http://localhost:5192/register
+	{
+	  "email": "email@email.com",
+	  "password": "!1a2B3"
+	}
+
+Retorna : Code 200 
+
+curl -X 'POST' \
+	'http://localhost:5192/register' \
+	-H 'accept: */*' \
+	-H 'Content-Type: application/json' \
+	-d '{
+	"email": "email2@email.com",
+	"password": "1a2B3@"
+	}'
+_______________________________________________
+# Logar
+
+Logar usando cookies para guardar a sessão.
+
+useCookies [true]
+{
+  "email": "email2@email.com",
+  "password": "1a2B3@"
+}
+[POST] : http://localhost:5192/login?useCookies=true
+
+
+Retorna : Code 200 para Sucesso
+Ou : 400 Bad request.
+
+curl -X 'POST' \
+	'http://localhost:5192/login?useCookies=true' \
+	-H 'accept: application/json' \
+	-H 'Content-Type: application/json' \
+	-d '{
+	"email": "email2@email.com",
+	"password": "1a2B3@"
+	}'
+_______________________________________________
+# Logado
+
+[GET] : http://localhost:5192/logado
+
+Retorna : Code 200 body : Você está logado.
+Ou : 401 Erro de autorização.
+
+
+
+_______________________________________________
+# Deslogar
+
+[POST] : http://localhost:5192/logout
+
+Retorna : Code 200
+_______________________________________________
+

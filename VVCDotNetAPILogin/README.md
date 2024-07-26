@@ -11,6 +11,36 @@ Este é um exemplo de projeto DotNet API com login de usuário, usando o Identit
 Repositório GitHub : 
 https://github.com/ViniciusVC/dotnet/tree/main/VVCDotNetAPILogin
 
+
+# RODAR PROJETO 
+> dotnet run
+
+
+### SWEGGER
+```
+Abra o Swagger em:
+http://localhost:5192/swagger/index.html
+(Apenas para teste de API.)
+```
+![navegador swagger](Docs/screenshot_swagger_dotnet.jpg "screenshot")
+
+
+# Endpoints:
+* / [GET]
+* /logado [GET]
+* /logout [POST]
+* /register [POST]
+* /login [POST]
+* /refresh [POST]
+* /confirmEmail [GET]
+* /resendConfirmationEmail [POST] 
+* /forgotPassword [POST]
+* /resetPassword [POST]
+* /manage/2fa [POST]
+* /manage/info [GET]
+* /manage/info [POST]
+
+
 # CRIANDO O PROJETO
 
 ### 1º Criar a solução.
@@ -59,31 +89,20 @@ Crie o diretorio Data e a Class AppDbContext.cs
 ### 11º Configurações no Program.cs.
 Incluir builder.Services.
 
-### 11º Verificar se o EF esta instlado..
+# EF
+
+### 1º Verificar se o EF está instalado.
 dotnet ef --version
 
+Para instalar o EF :
 
+> dotnet tools install -g dotnet-ef
 
-### Criar uma migração.
-dotnet ef migrations add v1
+### 2º Criar uma migração.
+> dotnet ef migrations add v1
 
-# Em caso de ERRO
-```
-Faça uma limpesa do projeto antes de seguir:
-> dotnet clean
-> dotnet restore
-```
-
-# RODAR PROJETO 
-> dotnet run
-
-### SWEGGER
-```
-Abra o Swagger em:
-http://localhost:5192/swagger/index.html
-(Apenas para teste de API.)
-```
-![navegador swagger](docs/screenshot_swagger_dotnet.jpg "screenshot")
+### 3º Aplicar a migração ao banco de dados.
+> dotnet ef database update
 
 
 # PUBLICAR PROJETO:
@@ -101,18 +120,27 @@ O projeto publicado(produção) roda na porta 5000.
 http://localhost:5000/api/
 ```
 
+
+# Em caso de ERRO
+```
+Faça uma limpesa do projeto antes de seguir:
+> dotnet clean
+> dotnet restore
+```
+
+
 # Banco De Dados 
-Veja em : /Docs/banco.md
+> Veja em : /Docs/banco.md
 
 
 # DOCKER
 ```
 Para gerar a imagem:
-$ sudo docker build . -t vvcdotnetapicalculadoraimg
+> docker build . -t vvcdotnetapiloginimg
 
 Criar um contêiner a partir da imagem que vc criou:
-$ sudo docker run -d -p 5000:5271 --name dotnet_api_calculadora vvcdotnetapicalculadoraimg
+> docker run -d -p 5000:5271 --name vvcdotnetapilogin vvcdotnetapiloginimg
 
 Para a execução do contêiner: 
-$ sudo docker stop dotnet_api_calculadora
+> docker stop vvcdotnetapilogin
 ```
