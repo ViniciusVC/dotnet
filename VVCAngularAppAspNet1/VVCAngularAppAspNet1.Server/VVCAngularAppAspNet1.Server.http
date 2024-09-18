@@ -1,0 +1,6 @@
+@VVCAngularAppAspNet1.Server_HostAddress = http://localhost:5133
+
+GET {{VVCAngularAppAspNet1.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

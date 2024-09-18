@@ -1,0 +1,63 @@
+body {
+  background-color: #00373a;
+  color: #f0cb65;
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: #00373a;
+  font-size: 50;
+}
+
+.appBody {
+  width: 100%;
+  padding: 10px;
+  font-family: sans-serif;
+  text-align: center;
+  font-style: normal;
+  background-color: #006c70;
+  background-image: linear-gradient(400deg, #006c70, #409c90);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginaBorda {
+  margin: 30px;
+  width: 90%;
+  /*min-width: 50px;
+    min-height: 50px;*/
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(5.4px);
+  box-shadow: 0 18px 20px rgba(0, 0, 0, 0.5);
+  padding: 3px;
+  background-image: linear-gradient(400deg, #bb6221, #ffef9b);
+  border-radius: 15px;
+}
+
+.paginaBranca {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+:host {
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+}
+
+th, td {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+table {
+  margin: 0 auto;
+}

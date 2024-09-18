@@ -10,7 +10,7 @@ namespace csharp_api.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Congelante", "Revigorante", "Frio", "Fresco", "Suave", "Morno", "Ameno", "Quente", "Abafado", "Escaldante"
         };
     
         private readonly ILogger<WeatherForecastController> _logger;

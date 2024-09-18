@@ -1,6 +1,7 @@
 
 _______________________________________________
 # Verifiocar se API esta de pé.
+
 [GET] http://localhost:5192/
 Retorna : Code 200, body "Hello World. Projeto DotNet API com login de usuário, usando o Identity API."
 
@@ -31,6 +32,7 @@ curl -X 'POST' \
 	"email": "email2@email.com",
 	"password": "1a2B3@"
 	}'
+
 _______________________________________________
 # Logar
 
@@ -43,7 +45,6 @@ useCookies [true]
 }
 [POST] : http://localhost:5192/login?useCookies=true
 
-
 Retorna : Code 200 para Sucesso
 Ou : 400 Bad request.
 
@@ -55,6 +56,7 @@ curl -X 'POST' \
 	"email": "email2@email.com",
 	"password": "1a2B3@"
 	}'
+
 _______________________________________________
 # Logado
 
@@ -63,13 +65,16 @@ _______________________________________________
 Retorna : Code 200 body : Você está logado.
 Ou : 401 Erro de autorização.
 
-
-
 _______________________________________________
 # Deslogar
 
 [POST] : http://localhost:5192/logout
 
 Retorna : Code 200
+
 _______________________________________________
 
+
+
+	"email": "email3@email.com",
+	"password": "1a3B3@"

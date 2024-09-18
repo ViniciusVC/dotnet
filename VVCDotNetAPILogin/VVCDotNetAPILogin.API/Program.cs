@@ -10,25 +10,43 @@ using VVCDotNetAPILogin.API.Models;
 using VVCDotNetAPILogin.API.Data;
 
 // https://learn.microsoft.com/pt-br/aspnet/core/security/cors?view=aspnetcore-8.0
-// var MyAllowSpecificOrigins = "_myAllowSpecificOrigins"; // Configurando o CORS com política nomeada e middleware.
+// Liberar URLs Expecificas
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins"; // Configurando o CORS com política nomeada e middleware.
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-/*
-//---Configurar-CORS------------------
-// https://learn.microsoft.com/pt-br/aspnet/core/security/cors?view=aspnetcore-8.0
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAllOrigins",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader();
-        });
-});
-//---Configurar-CORS------------------
-*/
+
+# region Configurar-CORS
+    // https://learn.microsoft.com/pt-br/aspnet/core/security/cors?view=aspnetcore-8.0
+
+    builder.Services.AddCors(options =>
+    {
+
+        // Liberar URLs Expecificas
+        options.AddPolicy(name: MyAllowSpecificOrigins,
+            policy  =>
+            {
+                policy.WithOrigins("http://localhost","http://localhost:3000","https://vvcestudio.com.br","http://vvcestudio.com.br")
+                                   .AllowAnyHeader()
+                                   .AllowAnyMethod();
+            });
+        
+        /*
+        // Liberar todas as urls
+        options.AddPolicy("AllowAllOrigins",
+            builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            });
+        */
+
+        // Política padrão e middleware.
+        // options.AddDefaultPolicy(
+    });
+# endregion
 
 
 //var connection = Configuration["ConexaoMySql:MySqlConnectionString"];
@@ -38,8 +56,6 @@ builder.Services.AddDbContext<AppDbContext>(
     options => options.UseMySQL("Server=127.0.0.1;Port=3306;Database=dbvvclogin;Uid=root;Pwd=senharoot;")
     //options => options.UseMySql(connection)
 );
-
-
 
 builder.Services.AddAuthentication(); // Quem é.
 builder.Services.AddAuthorization(); // Quais permições tem.
@@ -62,55 +78,33 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+
 //---Configurar-CORS------------------
-//app.UseCors("AllowAllOrigins");
+app.UseCors(MyAllowSpecificOrigins); // Liberar URLs Expecificas
+//app.UseCors("AllowAllOrigins"); // Liberar todas as urls
 //---Configurar-CORS------------------
 
 
 //app.MapSwagger().RequireAuthorization();
-app.MapGet("/", ()=>" Hello World. Projeto DotNet API com login de usuário, usando o Identity API.");
+
+app.MapGet("/apilogin/", ()=>" Hello World! Projeto DotNet API com login de usuário, usando o Identity API.")
+    .RequireCors(MyAllowSpecificOrigins);
     // Retorna codigo 200
 
-app.MapGet("/logado", ()=>"Você está logado.").RequireAuthorization();
+app.MapGet("/apilogin/logado", ()=>"Você está logado.")
+    .RequireAuthorization().RequireCors(MyAllowSpecificOrigins);
     // Retorna codigo 200 se estiver logado.
 
-app.MapPost("/logout", 
+app.MapPost("/apilogin/logout", 
     async (SignInManager<User> signInManager, [FromBody] object empty) => {
         await signInManager.SignOutAsync();
         return Results.Ok(); 
         // Retorna codigo 200
-    });
+    }).RequireCors(MyAllowSpecificOrigins);
 
+//app.MapControllers().RequireCors(MyAllowSpecificOrigins);
+// app.MapIdentityApi<User>().RequireCors(MyAllowSpecificOrigins);
 
-app.MapIdentityApi<User>();
-
-/*
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
-*/
+app.MapGroup("/apilogin").MapIdentityApi<User>().RequireCors(MyAllowSpecificOrigins);
 
 app.Run();
-
-/*
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
-*/

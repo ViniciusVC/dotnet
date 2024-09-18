@@ -1,0 +1,37 @@
+
+
+<div class="appBody">
+  <div class="paginaBorda">
+    <div class="paginaBranca">
+
+      <h1 id="tableLabel">Previsão do Tempo</h1>
+
+      <p>
+        Este componente demonstra a busca de dados via API no servidor.
+      </p>
+
+      <p *ngIf="!forecasts">
+        <em>Carregando... Por favor, atualize assim que o backend ASP.NET for iniciado. Veja<a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> para mais detalhes.</em>
+      </p>
+
+      <table *ngIf="forecasts">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Temp.(C)</th>
+            <th>Temp.(F)</th>
+            <th>Sumario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let forecast of forecasts">
+            <td>{{ forecast.date }}</td>
+            <td>{{ forecast.temperatureC }}</td>
+            <td>{{ forecast.temperatureF }}</td>
+            <td>{{ forecast.summary }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
