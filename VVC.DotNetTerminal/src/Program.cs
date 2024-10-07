@@ -1,3 +1,5 @@
+/*
+
 using System; //Manipular sitema operacional.
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
@@ -5,7 +7,7 @@ using System.Linq; // ṕara trabalhar com grande Conjunto de dados.
 using System.Text; // Manipular texto.
 using System.Threading.Tasks; // Processos paralelos (usa nucleos separados).
 
-/*
+
 Este é o arquivo principal deste projeto.
 Projeto DotNet Core do tipo console.
 
@@ -131,10 +133,41 @@ namespace ProgramCSharp001
         {
             Console.WriteLine("Selecione a opção desejada:");
             Console.WriteLine("1-Criar\n2-Deletar\n3-Editar\n4-Listar\n5-Atualizar");
-            int index = int.Parse(Console.ReadLine());
-            //Falta tratamento
 
-            return "terminou menu";
+            ConsoleKeyInfo cki = Console.ReadKey();
+			if(cki.Key == ConsoleKey.D1) 
+			{
+			   	return "opção 1 escolhida (Criar)";
+			}   
+			    else if(cki.Key == ConsoleKey.D2) 
+			    {
+			       return "opção 2 escolhida (Deletar)";
+				}
+				else if(cki.Key == ConsoleKey.D3) 
+			    {
+			        return "opção 3 escolhida (Editar)";
+				}
+				else if(cki.Key == ConsoleKey.D4)
+			    {
+			        return "opção 4 escolhida (Listar)";
+				}
+				else if(cki.Key == ConsoleKey.D5) 
+			    {
+			        return "opção 5 escolhida (Atualizar)";
+				}
+				else 
+				{
+					return "Nenhuma opção escolhida.";
+				}
+
+            /*
+            try{
+                int index = int.Parse(Console.ReadLine());
+                //Falta tratamento
+            }catch{
+                return "Erro ao ler resposta!";
+            }
+            */
         }
 
     }

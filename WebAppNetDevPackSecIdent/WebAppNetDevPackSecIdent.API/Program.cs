@@ -24,4 +24,7 @@ app.UseAuthConfiguration();
 
 app.MapControllers();
 
+Console.WriteLine("Acesse http://localhost:5000/swagger/ para testar a API.");
+
 app.Run();
+

@@ -1,13 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using csharp_api.Entities;
 
-
+// Previsão do tempo.
 namespace csharp_api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        // Criando sumário de temperatura.
         private static readonly string[] Summaries = new[]
         {
             "Congelante", "Revigorante", "Frio", "Fresco", "Suave", "Morno", "Ameno", "Quente", "Abafado", "Escaldante"
@@ -23,7 +24,7 @@ namespace csharp_api.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            return "ok!!!!!!";
+            //return "ok!!!!!!";
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),

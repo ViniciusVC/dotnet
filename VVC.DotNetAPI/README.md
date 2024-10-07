@@ -2,6 +2,8 @@
 ## VVC.DotNetAPI
 
 Este é um exemplo de DotNet API, em codigo C#, codificado no VSCode no Linux Ubuntu.
+API de Previsão do Tempo.
+
 
 /csharp_api/
 
@@ -24,6 +26,8 @@ $ dotnet new webapi --name csharp_api
 $ dotnet watch run
 ou
 $ dotnet run
+ou
+$ dotnet run --project src/csharp_api.csproj
 
 ```
 

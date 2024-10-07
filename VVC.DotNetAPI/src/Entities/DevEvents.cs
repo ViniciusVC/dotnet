@@ -1,17 +1,17 @@
-
+/*
 namespace csharp_api.Entities
 {
     // Entidade Evento
     public class DevEvent
     {
 
-        //Construitor da classe (sem parametros)  
+        // Construitor da classe (sem parametros)  
         public DevEvent()
         {
             Speakers=new List<DevEventSpeaker>();
             IsDeleted=false;
         }
-
+ 
         // Propriedades da entidade DevEvent
         public Guid Id {get; set;}
         public string Title {get; set;}
@@ -40,3 +40,4 @@ namespace csharp_api.Entities
 
     }
 }
+*/
