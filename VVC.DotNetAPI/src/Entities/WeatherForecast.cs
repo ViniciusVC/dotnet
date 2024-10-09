@@ -1,12 +1,14 @@
-namespace csharp_api;
-
-public class WeatherForecast
+namespace csharp_api.Entities
 {
-    public DateOnly Date { get; set; }
+    // Entidade de Previsão do Tempo.
+    public class WeatherForecast
+    {
+        public DateOnly Date { get; set; }
 
-    public int TemperatureC { get; set; }
+        public int TemperatureC { get; set; }
 
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-    public string? Summary { get; set; }
+        public string? Summary { get; set; }
+    }
 }

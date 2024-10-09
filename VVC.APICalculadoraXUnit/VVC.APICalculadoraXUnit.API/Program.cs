@@ -1,5 +1,8 @@
 var builder = WebApplication.CreateBuilder(args);
 
+
+Console.WriteLine("Iniciando aplicação APICalculadoraXUnit");
+
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
@@ -44,7 +47,11 @@ app.MapGet("/weatherforecast", () =>
 .WithOpenApi();
 */
 
+Console.WriteLine("Abra uma pagina em com Swagger em: http://localhost:5003/swagger/index.html");
+
 app.Run();
+
+Console.WriteLine("API encerrada.");
 
 /*
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)

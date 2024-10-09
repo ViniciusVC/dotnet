@@ -1,10 +1,11 @@
+/*
 using System; //Manipular sitema operacional.
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq; // ṕara trabalhar com grande Conjunto de dados.
 using System.Text; // Manipular texto.
 //using System.Threading.Tasks; // Processos paralelos (usa nucleos separados).
-
+*/
 
 namespace ProgramCSharp001
 {
@@ -18,6 +19,7 @@ namespace ProgramCSharp001
         public classOpcoesDeLoop(){
             // O metodo construtor tem o mesmo nome da classe
             Console.WriteLine("\nInstanciou a classe Opcoes De Loop.");
+
         }
 
         // Metodos da classe são equivalente a funções.
@@ -31,7 +33,9 @@ namespace ProgramCSharp001
                 //contador += 1;
                 contador++;
             }
-            Console.WriteLine("Fim do loop while.\n");    
+            Console.WriteLine("Fim do loop while.\n");  
+            Console.WriteLine("Pressione qualquer tecla para retornar ao menu.");
+            Console.ReadKey(true);  
         }
          
         public void functLoopForeach()
@@ -41,7 +45,9 @@ namespace ProgramCSharp001
             {
                 Console.WriteLine("apelido="+apelido);
             }
-            Console.WriteLine("Fim do loop foreach.\n");    
+            Console.WriteLine("Fim do loop foreach.\n");
+            Console.WriteLine("Pressione qualquer tecla para retornar ao menu.");
+            Console.ReadKey(true);    
         }
 
         public void functLoopFor()
@@ -52,6 +58,8 @@ namespace ProgramCSharp001
                 Console.WriteLine(contador + "-" +nomes[contador]);
             }
             Console.WriteLine("Fim do loop for.\n");    
+            Console.WriteLine("Pressione qualquer tecla para retornar ao menu.");
+            Console.ReadKey(true);
         }
 
         ~classOpcoesDeLoop(){

@@ -100,7 +100,7 @@ Rodar projeto publicado:
 /bin/Release/net8.0/osx-x64$ dotnet CalculadoraSimplesAPI.dll
 
 O projeto publicado(produção) roda na porta 5000.
-http://localhost:5000/api/
+http://localhost:5003/api/Calcularora
 ```
 
 

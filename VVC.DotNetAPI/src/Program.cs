@@ -1,25 +1,25 @@
 var builder = WebApplication.CreateBuilder(args);
 
 // Adicione serviços ao container.
-
 builder.Services.AddControllers();
-// Saiba mais sobre como configurar o Swagger/OpenAPI em https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(); 
 
 var app = builder.Build();
 
-// Configure o pipeline de solicitação HTTP.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    // Abrir Swagger caso ambinte de desenvolvimento.
+    app.UseSwagger(); 
+    app.UseSwaggerUI(); // Swagger Interface de usurio.
 }
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllers(); // mapiar controllers. 
+
+Console.WriteLine("Acesse http://localhost:5297/swagger/ para testar aplicação.");
 
 app.Run();
