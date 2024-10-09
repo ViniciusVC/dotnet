@@ -1,7 +1,7 @@
 
-# VVCDotNetWorker
+# VVCDotNetWorkerAwait
 
-Este é um projeto **Worker Service** com alguns exemplos de utilização de **ILogger**.
+Este é um projeto **Worker Service**.
 
 Um **Worker Service** é uma aplicação de serviço em segundo plano que pode ser executada no Windows como um serviçodo Windows ou no Linux como um daemon. Ele é baseado no Host Genérico do .NET, o que facilita a configuração e a execução de tarefas de longa duração.
 
@@ -9,7 +9,7 @@ Um **Worker Service** é uma aplicação de serviço em segundo plano que pode s
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
 
 Repositorio no GIT :
-https://github.com/ViniciusVC/dotnet/tree/main/VVCDotNetWorker
+https://github.com/ViniciusVC/dotnet/tree/main/VVCDotNetWorkerAwait
 
 
 # Rodar aplicação:
@@ -24,3 +24,6 @@ https://github.com/ViniciusVC/dotnet/tree/main/VVCDotNetWorker
 
 * Worker.cs: Contém a lógica principal do serviço.
 * Program.cs: Configura e inicia o host genérico.
+
+
+
