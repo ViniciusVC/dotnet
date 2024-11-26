@@ -13,16 +13,14 @@ var builder = WebApplication.CreateBuilder(args);
 //var connection = Configuration["ConexaoMySql:MySqlConnectionString"];
                               
 builder.Services.AddDbContext<AppDbContext>(
-    //options => options.UseMySql("Server=127.0.0.1;Port=3306;Database=dbvvclogin;Uid=root;Pwd=senharoot;")
     options => options.UseMySQL("Server=127.0.0.1;Port=3306;Database=dbvvclogin;Uid=root;Pwd=senharoot;")
     //options => options.UseMySql(connection)
 );
-// The type or namespace name 'AppDbContext' could not be found (are you missing a using directive or an assembly. 
 
 builder.Services.AddAuthentication(); // Quem é.
 builder.Services.AddAuthorization(); // Quais permições tem.
 
-// 'IServiceCollection' não contém uma definição para 'AppAuthentication' e nenhum método de extensão acessível 'AppAuthentication' aceitando um primeiro argumento do tipo 'IServiceCollection' foi encontrado (está faltando uma diretiva using ou uma referência de assembly?)
+// Erro : 'IServiceCollection' não contém uma definição para 'AppAuthentication' e nenhum método de extensão acessível 'AppAuthentication' aceitando um primeiro argumento do tipo 'IServiceCollection' foi encontrado (está faltando uma diretiva using ou uma referência de assembly?)
 
 builder.Services
     .AddIdentityApiEndpoints<User>()
@@ -30,8 +28,8 @@ builder.Services
 
 var app = builder.Build();
 
-app.MapGet("/", () => " Ok. Projeto VVCDotNetIdentity.");
-app.MapGet("/logado", ()=>" Ok. Logado no Projeto VVCDotNetIdentity.").RequireAuthorization();
+app.MapGet("/", () => " Ok. Projeto VVCDotNetIdentityAPI.");
+app.MapGet("/logado", ()=>" Ok. Logado no Projeto VVCDotNetIdentityAPI.").RequireAuthorization();
 app.MapPost("/logout", 
     async (SignInManager<User> signInManager, [FromBody] object empty) => {
         await signInManager.SignOutAsync();

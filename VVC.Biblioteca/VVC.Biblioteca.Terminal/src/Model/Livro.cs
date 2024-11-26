@@ -1,11 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 
 // Modelo de dados da tabela Livro usando DataAnnotations
-namespace VVC.Biblioteca.Terminal.Model
-{
+namespace VVC.Biblioteca.Terminal.Model;
 
-    public class Livro
-    {
+public class Livro
+{
         [Key]
         public int Id { get; set; }
 
@@ -27,9 +26,10 @@ namespace VVC.Biblioteca.Terminal.Model
         [Required]
         [StringLength(50)]
         public string LivroEdicao { get; set; }
-    }
 
 }
+
+
 
 /*
     -- SQl de criaçã oda tabela Livro.

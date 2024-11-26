@@ -1,6 +1,5 @@
 /*
     Esta é a entidade Todo.cs. 
-    Representação do modelo de dados.
     Esta é uma Classe de Contexto.
 */
 

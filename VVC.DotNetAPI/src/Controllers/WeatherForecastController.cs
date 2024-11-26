@@ -34,5 +34,20 @@ namespace csharp_api.Controllers
             .ToArray();
         }
 
+        /// <summary>
+        /// Recupera o modelo de equipes a partir de um agrupamento e perfil de equipe.
+        /// </summary>
+        /// <param name="id">Inteiro. Indica qual ID. </param>
+        /// <param name="servicos">Inteiro. Indica qual o servicos.</param>
+        /// <returns>Retorna uma mensagem contendo um modelo de equipe pertencente ao agrupamento e categoria parametrizados.</returns>
+        /// <response code="200">OK</response>
+        /// <response code="400">Parâmetros inválidos</response>
+        [HttpGet("api/operadores/{id}")]
+        public IActionResult GetOperador(int id, [FromQuery] int[] servicos)
+        {
+            // Andpoint que recebe um ID e um array de IDs de serviços.
+            return Ok(new { OperadorId = id, Servicos = servicos });
+        }
+
     }
 }

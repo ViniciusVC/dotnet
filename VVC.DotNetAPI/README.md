@@ -1,7 +1,7 @@
 
 ## VVC.DotNetAPI
 
-Este é um exemplo de DotNet API, em codigo C#, codificado no VSCode no Linux Ubuntu.
+Este é o exemplo padrao de DotNet API, em codigo C#, codificado no VSCode no Linux Ubuntu.
 API de Previsão do Tempo.
 
 
@@ -33,9 +33,14 @@ $ dotnet run --project src/csharp_api.csproj
 
 # Ao iniciar o servidor 
 ```
-Abra uma pagina em com Swagger em:
-http://localhost:5271/swagger/index.html
+Abra o Swagger em:
+http://localhost:5297/swagger/index.html
 ```
+
+## Endpoints :
+* http://localhost:5297/WeatherForecast
+* http://localhost:5297/WeatherForecast/api/operadores/{id}
+
 
 # Controllers
 ```

@@ -41,4 +41,11 @@ public class Worker : BackgroundService
         }
     }
 
+    public override string ToString()
+    {
+        return $"{_originalList.};
+        //return base.ToString();
+
+    }
+
 }
