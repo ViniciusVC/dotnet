@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-using System.Security.Claims;
+using System.Security.Claims; // < -- para incluir informações no Tokem.
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 //using Microsoft.Extensions.Configuration;
@@ -18,9 +18,8 @@ public class TokenService
         // Criar uma instância do JwtSecurityTokenHandler que gera o Token.
         var handler = new JwtSecurityTokenHandler();
 
-        var key = Encoding.ASCII.GetBytes(secretKey);
+        var key = Encoding.ASCII.GetBytes(secretKey); // Lendo a secretKey do appsettings.
         // var key = Encoding.UTF8.GetBytes(Configuration.Privatekey);
-        // var key = Encoding.ASCII.GetBytes(Configuration.Privatekey);
 
 
         // new SigningCredentials(CHAVE, ALGORITIMO)

@@ -22,6 +22,12 @@ $ dotnet watch run
 # Abre o Swagger em:
 > http://localhost:5271/swagger/index.html
 
+Teste de acesso 1:
+![ProjetoConsolePrtSc](docs/prtscrn_postiman_1.jpg "PrtScConsole")
+
+Teste de acesso 2:
+![ProjetoConsolePrtSc](docs/prtscrn_postiman_2.jpg "PrtScConsole")
+
 
 ### Dependencia JWTBearer
 ```
@@ -35,6 +41,10 @@ dotnet add package Microsoft.Extensions.Configuration.Json
 
 Ou adicione os pacotes via nuguet.
 ```
+
+### nota:
+para testes locais manter a validação de Issuer desativada:
+> ValidateIssuer = false,
 
 
 # testando a aplicação
@@ -50,3 +60,7 @@ Use uma ferramenta como Postman ou cURL para enviar uma requisição ao endpoint p
 Exemplo com cURL:
 
 > curl -H "Authorization: Bearer YOUR_JWT_TOKEN" http://localhost:5217/Api/Protected/default
+
+ou
+
+> curl -H "Authorization: Bearer YOUR_JWT_TOKEN" http://localhost:5217/Api/Protected/user

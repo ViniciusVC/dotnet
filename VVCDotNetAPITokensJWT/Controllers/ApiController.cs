@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
+using System.Security.Claims; // < -- para incluir informações no Tokem.
+
 using VVCDotNetAPITokensJWT.Models;
 using VVCDotNetAPITokensJWT.Services;
 
@@ -96,11 +98,31 @@ public class ApiController : ControllerBase
         return Ok(token);
     }
 
+
     [HttpGet("Protected/default")]
     [Authorize]
     public IActionResult GetProtectedData()
     {
         return Ok("Acessou o endpoint protegido! Tokem confirmado.");
+    }
+
+
+    [HttpGet("Protected/user")]
+    [Authorize]
+    public IActionResult GetProtectedUser()
+    {
+
+        // Acessar as claims do usuário autenticado
+        var userId = User.FindFirst("sub")?.Value; // "sub" é a claim padrão para o ID do usuário
+        var email = User.FindFirst(ClaimTypes.Email)?.Value;
+        var roles = User.FindAll(ClaimTypes.Role).Select(r => r.Value).ToList();
+
+        return Ok(new
+        {
+            UserId = userId,
+            Email = email,
+            Roles = roles
+        });
     }
 
 }
