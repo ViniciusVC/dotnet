@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Security.Claims; // < -- para incluir informações no Tokem.
 using System.IdentityModel.Tokens.Jwt;
@@ -93,18 +93,18 @@ public class TokenService
 
     private static ClaimsIdentity GenerateClaimsTesteE(TesteE testeE)
     {
-
         var ci = new ClaimsIdentity();
 
         foreach (var i in testeE.Unique_name)
             ci.AddClaim(new Claim(ClaimTypes.Name, i));
-            ci.AddClaim(new Claim("Usuario", testeE.Usuario));
-            ci.AddClaim(new Claim("Ordem", testeE.Ordem));
-            ci.AddClaim(new Claim("Role", testeE.Role));
-            ci.AddClaim(new Claim("Demanda", testeE.Demanda));
-            ci.AddClaim(new Claim("Localidade", testeE.Localidade));
-            ci.AddClaim(new Claim("Iss", testeE.Iss));
-            ci.AddClaim(new Claim("Aud", testeE.Aud));
+
+        ci.AddClaim(new Claim("Usuario", testeE.Usuario));
+        ci.AddClaim(new Claim("Ordem", testeE.Ordem));
+        ci.AddClaim(new Claim("Role", testeE.Role));
+        ci.AddClaim(new Claim("Demanda", testeE.Demanda));
+        ci.AddClaim(new Claim("Localidade", testeE.Localidade));
+        ci.AddClaim(new Claim("Iss", testeE.Iss));
+        ci.AddClaim(new Claim("Aud", testeE.Aud));
 
         return ci;
     }

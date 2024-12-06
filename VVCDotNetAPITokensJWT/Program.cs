@@ -1,9 +1,15 @@
+using Scalar.AspNetCore; // importar Scalar (Substituto ao Swagger)
+
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.OpenApi;
+//using Microsoft.OpenApi;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
 using VVCDotNetAPITokensJWT;
 using VVCDotNetAPITokensJWT.Services;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,16 +17,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddSingleton<TokenService>(); // < -------Incluido para Token
 
+builder.Services.AddEndpointsApiExplorer(); // <-- Adiciona suporte ao API Explorer. (DotNet8)
+builder.Services.AddSwaggerGen(); // <-- (DotNet8)
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 // Configurar a leitura do appsettings.json
 builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
-// Registrar a configuração JWT
+// Registrar a configuracao JWT
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("jwt"));
-
 
 // -Configurar-a-autenticacao-JWT---------------------\
 var jwtSettings = builder.Configuration.GetSection("jwt").Get<JwtSettings>();
@@ -94,13 +99,21 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    // Abrirá o Swagger em desenvolvimento.
+    app.UseDeveloperExceptionPage(); // < -- ?
+    // Abrira o Swagger em desenvolvimento.
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    //----------------------------------------------------\
+    //app.MapOpenApi(); // <--- Abrira em /scalar/v1 (Problema de compatibilidade com DotNet8)
+    app.MapScalarApiReference();
+    //-----------------------------------------------------/ 
 }
 
 //app.UseHttpsRedirection(); // Configurar o pipeline HTTP
 app.UseAuthorization();
+
+//app.MapOpenApi();
 
 app.MapControllers();
 
