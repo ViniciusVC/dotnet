@@ -41,7 +41,9 @@ $ dotnet new classlib -n calculos
 Criando o projeto de teste:
 $ dotnet new xunit -n calculos.tests
 
-Adicione este projeto na solução:
+
+Adicione este projetos na solução:
+$ dotnet sln testes_calculadora_xunit add src/calculos/calculos.csproj
 $ dotnet sln testes_calculadora_xunit add calculos.tests/calculos.tests.csproj
 
 E adicione nele a referência da biblioteca de calculos nele:
