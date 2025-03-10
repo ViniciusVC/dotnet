@@ -77,7 +77,8 @@ crie o arquivo da classe model nesta pasta.
 Criando o projeto de teste:
 $ dotnet new xunit -n VVC.APICalculadoraXUnit.Test
 
-Adicione este projeto na solução:
+Adicione este projetos na solução:
+$ dotnet sln VVC.APICalculadoraXUnit.sln add VVC.APICalculadoraXUnit.API/VVC.APICalculadoraXUnit.API.csproj
 $ dotnet sln VVC.APICalculadoraXUnit.sln add VVC.APICalculadoraXUnit.Test/VVC.APICalculadoraXUnit.Test.csproj
 
 Adicione a referência do Projeto API no Projeto Test:

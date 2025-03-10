@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calculos.tests", "calculos.tests\calculos.tests.csproj", "{2E3A8F79-51A9-47AA-BB29-2F291A0FA144}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calculos", "calculos\calculos.csproj", "{D8ED670C-4123-49CD-A0CB-06A8B57F128A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{2E3A8F79-51A9-47AA-BB29-2F291A0FA144}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E3A8F79-51A9-47AA-BB29-2F291A0FA144}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E3A8F79-51A9-47AA-BB29-2F291A0FA144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8ED670C-4123-49CD-A0CB-06A8B57F128A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8ED670C-4123-49CD-A0CB-06A8B57F128A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8ED670C-4123-49CD-A0CB-06A8B57F128A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8ED670C-4123-49CD-A0CB-06A8B57F128A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

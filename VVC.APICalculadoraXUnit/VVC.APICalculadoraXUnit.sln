@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VVC.APICalculadoraXUnit.Test", "VVC.APICalculadoraXUnit.Test\VVC.APICalculadoraXUnit.Test.csproj", "{CC4C23B5-7827-44AE-A436-A94995384469}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VVC.APICalculadoraXUnit.API", "VVC.APICalculadoraXUnit.API\VVC.APICalculadoraXUnit.API.csproj", "{AC0155C4-57F8-43D1-BF9E-9B6A053D10E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{CC4C23B5-7827-44AE-A436-A94995384469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC4C23B5-7827-44AE-A436-A94995384469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC4C23B5-7827-44AE-A436-A94995384469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC0155C4-57F8-43D1-BF9E-9B6A053D10E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC0155C4-57F8-43D1-BF9E-9B6A053D10E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC0155C4-57F8-43D1-BF9E-9B6A053D10E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC0155C4-57F8-43D1-BF9E-9B6A053D10E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
